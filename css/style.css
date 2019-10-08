@@ -621,7 +621,7 @@ body.offcanvas {
   -ms-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
   -o-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
   box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  border-bottom: 2px solid #2c98f0; }
+  border-bottom: 2px solid #211f1f; }
   .services .icon2 {
     display: block;
     margin-bottom: 20px; }
@@ -633,11 +633,11 @@ body.offcanvas {
     font-size: 16px;
     font-weight: 500; }
   .services.color-2 {
-    border-bottom: 2px solid #ec5453; }
+    border-bottom: 2px solid #2d76b5; }
     .services.color-2 .icon2 i {
       color: #ec5453; }
   .services.color-3 {
-    border-bottom: 2px solid #f9bf3f; }
+    border-bottom: 2px solid #37b875; }
     .services.color-3 .icon2 i {
       color: #f9bf3f; }
   .services.color-4 {
@@ -665,7 +665,7 @@ body.offcanvas {
     height: 50px;
     display: table;
     margin: 0 auto;
-    background: #2c98f0; }
+    background: #211F1F; }
     .services .icon:before, .services .icon:after {
       position: absolute;
       left: 0;
@@ -677,14 +677,14 @@ body.offcanvas {
       height: 0;
       border-style: solid;
       border-width: 0 50px 30px 50px;
-      border-color: transparent transparent #2c98f0 transparent; }
+      border-color: transparent transparent #211F1F transparent; }
     .services .icon:after {
       bottom: -30px;
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 30px 50px 0 50px;
-      border-color: #2c98f0 transparent transparent transparent; }
+      border-color: #211F1F transparent transparent transparent; }
     .services .icon i {
       font-size: 30px;
       color: #fff;
@@ -698,17 +698,17 @@ body.offcanvas {
       font-weight: 700;
       text-transform: uppercase; }
   .services.color-2 .icon {
-    background: #ec5453; }
+    background: #0077B5; }
     .services.color-2 .icon:before {
-      border-color: transparent transparent #ec5453 transparent; }
+      border-color: transparent transparent #0077B5 transparent; }
     .services.color-2 .icon:after {
-      border-color: #ec5453 transparent transparent transparent; }
+      border-color: #0077B5 transparent transparent transparent; }
   .services.color-3 .icon {
-    background: #f9bf3f; }
+    background: #02b875; }
     .services.color-3 .icon:before {
-      border-color: transparent transparent #f9bf3f transparent; }
+      border-color: transparent transparent #02b875 transparent; }
     .services.color-3 .icon:after {
-      border-color: #f9bf3f transparent transparent transparent; }
+      border-color: #02b875 transparent transparent transparent; }
   .services.color-4 .icon {
     background: #a84cb8; }
     .services.color-4 .icon:before {
@@ -1427,3 +1427,29 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+/*scrollbar Design*/
+  ::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar
+  {
+    width: 8px;
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+    background-color: #F90; 
+    background-image: -webkit-linear-gradient(45deg,
+      rgba(255, 255, 255, .2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, .2) 50%,
+      rgba(255, 255, 255, .2) 75%,
+      transparent 75%,
+      transparent)
+  }
