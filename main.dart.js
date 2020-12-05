@@ -6183,7 +6183,7 @@ g.se8(H.t(g).h("aV.T*").a(p))
 o=T.p_(q,g.ej(),"h1")
 T.lZ(o,"Hello ")
 o.appendChild(g.e.b)
-T.lZ(o," . This is still a work in progress")
+T.lZ(o," . This is still a work in progress. Come back here later")
 n=s.b.c
 m=new D.aE(s,n,s.a,H.t(s).h("aE<av.T*>"))
 l=q.querySelector("my-app")
