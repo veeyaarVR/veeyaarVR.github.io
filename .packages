@@ -4,6 +4,8 @@ angular:packages/angular/
 angular_app:packages/angular_app/
 angular_ast:packages/angular_ast/
 angular_compiler:packages/angular_compiler/
+angular_forms:packages/angular_forms/
+angular_router:packages/angular_router/
 angular_test:packages/angular_test/
 archive:packages/archive/
 args:packages/args/
