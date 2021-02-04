@@ -2,7 +2,7 @@ import Particles from "react-particles-js";
 import React from "react";
 import '../css/HoverAnimation.css'
 
-export default () => {
+export default ParticleBackground = () => {
   return (
     <Particles className='body-particles'
       params={{
