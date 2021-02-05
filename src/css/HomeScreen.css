@@ -37,11 +37,12 @@
 
 .question {
   font-family: "Calibre", sans-serif;
-  font-size: clamp(20px, 2vw, 40px);
+  font-size: clamp(20px, 1vw, 40px);
   font-weight: 400;
   text-align: center;
   color:#444452;
 }
+
 
 .button-margin{
   margin: 5px;

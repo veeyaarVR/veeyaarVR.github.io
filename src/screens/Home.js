@@ -37,7 +37,7 @@ function LowerHalf() {
   return (
     <div id="bottom_div">
       <div className="center_all">
-        <h1 className="custom-subTitle">
+        <h1 className="question">
           How would you like to know about me?
         </h1>
         <Container>
