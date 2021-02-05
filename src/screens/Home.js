@@ -44,14 +44,12 @@ function LowerHalf() {
           <Row className="justify-content-center">
             <Button
               variant="outline-dark"
-              className="btn fourth"
               href="/personal"
             >
               Personal
             </Button>
             <Button
               variant="outline-dark"
-              className="btn fourth"
               href="/professional"
             >
               professional
