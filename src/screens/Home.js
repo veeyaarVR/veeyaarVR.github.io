@@ -1,8 +1,8 @@
-import { Button, Row, Container } from "react-bootstrap";
+import { Button, Row, Container, Col } from "react-bootstrap";
 import ParticleBackground from "../components/ParticleBackground";
+import MediaQuery from "react-responsive";
 import "../css/HomeScreen.css";
 import "../css/HoverAnimation.css";
-import "../sass/gradientText.scss";
 import "../sass/buttonAnimation.scss";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <div>
         <ParticleBackground />
         <UpperHalf />
-        <LowerHalf />
+        {/* <LowerHalf /> */}
       </div>
     </div>
   );
@@ -19,16 +19,22 @@ export default function Home() {
 
 function UpperHalf() {
   return (
-    <div id="top_div">
-      <div className="center_all">
-        <h1 className="custom-subTitle">Hai, I am</h1>
-        <h1 className="custom-title glitch" data-text="Vignesh Marimuthu">
-          Vignesh Marimuthu
-        </h1>
-        <h1 className="custom-subTitle">
-          the Zodiac Coder | Android dev based in India
-        </h1>
-      </div>
+    <div className="center_all">
+      <h1 className="custom-subTitle">Hi, my name is</h1>
+      <h1 className="custom-title" data-text="Vignesh Marimuthu">
+        Vignesh Marimuthu
+      </h1>
+
+      <Container>
+        <Row className="justify-content">
+            <a href="/personal" class="personal-link">
+              Personal→
+            </a>
+            <a href="/professional" class="personal-link">
+              Professional→
+            </a>
+        </Row>
+      </Container>
     </div>
   );
 }
@@ -37,19 +43,21 @@ function LowerHalf() {
   return (
     <div id="bottom_div">
       <div className="center_all">
-        <h1 className="question">
+        <h1 className="custom-subTitle">
           How would you like to know about me?
         </h1>
         <Container>
           <Row className="justify-content-center">
             <Button
               variant="outline-dark"
+              className="btn fourth"
               href="/personal"
             >
               Personal
             </Button>
             <Button
               variant="outline-dark"
+              className="btn fourth"
               href="/professional"
             >
               professional
@@ -61,7 +69,7 @@ function LowerHalf() {
   );
 }
 
-  /* <div>
+/* <div>
 <div >
   <ParticleBackground />
   <div className="top-box " id="top_div">

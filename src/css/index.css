@@ -6,6 +6,20 @@
 }
 
 @font-face {
+  font-family: 'Epilogue';
+  src: local('Epilogue SemiBold'), url(../fonts/Epilogue/Epilogue-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FiraCode';
+  src: local('FiraCode Regular'), url(../fonts/FiraCode/FiraCode-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Calibre-Medium';
   src: local('Calibre Medium'), url(../fonts/Calibre/Calibre-Medium.ttf) format('truetype');
   font-weight: 500;
@@ -18,7 +32,6 @@
   font-weight: 500;
   font-style: normal;
 }
-
 
 
 body {
