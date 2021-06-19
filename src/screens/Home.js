@@ -1,6 +1,5 @@
-import { Button, Row, Container, Col } from "react-bootstrap";
+import { Button, Row, Container} from "react-bootstrap";
 import ParticleBackground from "../components/ParticleBackground";
-import MediaQuery from "react-responsive";
 import "../css/HomeScreen.css";
 import "../css/HoverAnimation.css";
 import "../sass/buttonAnimation.scss";
