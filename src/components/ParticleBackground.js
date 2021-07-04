@@ -1,6 +1,5 @@
 import Particles from "react-particles-js";
 import React from "react";
-import "../css/HoverAnimation.css";
 
 export default function ParticleBackground() {
   return (

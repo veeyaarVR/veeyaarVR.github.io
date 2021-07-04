@@ -1,0 +1,45 @@
+.superTitleWhite {
+  color: $textPrimary;
+  font-family: "Epilogue SemiBold", sans-serif;
+  font-size: clamp(40px, 4vw, 80px);
+}
+
+.subHeadingFiraGreen {
+  font-family: "FiraCode", sans-serif;
+  font-size: 1em;
+  color: $colorSecondary;
+
+  @include phone {
+    font-size: 1em;
+  }
+
+  @include tablet {
+    font-size: 1.10em ;
+  }
+}
+
+.subHeadingEpilogueWhite{
+  font-family: "Epilogue", sans-serif;
+  font-size: 1.5em;
+  color: $textPrimary;
+
+  @include phone {
+    font-size: 1em;
+  }
+
+  @include tablet {
+    font-size: 1.10em ;
+  }
+}
+
+.buttonText {
+  color: $colorSecondary;
+  line-height: 1;
+  font-family: "FiraCode", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+
+  &:hover {
+    color: $colorSecondary;
+  }
+}

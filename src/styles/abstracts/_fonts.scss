@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Epilogue SemiBold";
+  src: local("Epilogue SemiBold"),
+    url(../../fonts/Epilogue/Epilogue-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: local("Epilogue Regular"),
+    url(../../fonts/Epilogue/Epilogue-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: local("FiraCode Regular"),
+    url(../../fonts/FiraCode/FiraCode-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
