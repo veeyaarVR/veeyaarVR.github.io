@@ -1,4 +1,4 @@
-import { Row, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ParticleBackground from "../components/ParticleBackground";
 
 export default function Home() {

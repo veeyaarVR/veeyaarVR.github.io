@@ -1,9 +1,9 @@
 .personal {
-  position: relative;
   background-color: $colorPrimary;
+  height: fit-content;
 }
 
-section{
+section {
   height: 100vh;
 }
 
@@ -22,7 +22,10 @@ section{
 }
 
 .personalIntro {
+  height: 100vh;
+  @include center(both);
   position: relative;
+  content: "";
 }
 
 .likesCenter {
@@ -35,12 +38,19 @@ section{
   text-align: center;
 }
 
-.shortStoryCenter{
+.shortStoryCenter {
   @include center(vertical);
 }
 
+//from tutorials
+.headerLogo {
+  height: 40px;
+  width: 40px;
+}
 
-
-
-
-
+.centerAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

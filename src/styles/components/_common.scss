@@ -1,3 +1,48 @@
-.padding25{
-    padding: 25px;
+.padding25 {
+  padding: 25px;
+}
+
+.superPadding {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.space{
+  height: 15px;
+  width: 100%;
+}
+
+.flex{
+  display: flex;
+
+  @include tablet{
+    flex-wrap: wrap;
+  }
+
+  @include phone{
+    flex-wrap: wrap;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+    @include phone{
+      text-align: center;
+    }
+  }
+
+  &-jc-sa {
+    justify-content: space-around;
+  }
+}
+
+.fullScreen{
+  min-height: 100vh;
 }
