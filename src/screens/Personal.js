@@ -58,7 +58,7 @@ function IntroSection() {
         <h1 className="subHeadingFiraGreen">🤘 HI, I AM VIGNESH MARIMUTHU</h1>
         <div className="space"> </div>
         <h1 className="superTitleWhite" data-text="Vignesh Marimuthu">
-          Minimalist | Stoic | Software Dev | Atheist | Human
+          He/Him | Minimalist | Stoic | Atheist | Human
         </h1>
         <div className="space"> </div>
         <a href="/personal" class="personal-link buttonText ">
