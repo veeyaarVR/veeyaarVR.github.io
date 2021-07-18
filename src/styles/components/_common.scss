@@ -56,3 +56,12 @@
 .fullScreen {
   min-height: 100vh;
 }
+
+.socialIcon{
+  size: 2x;
+  color: $colorSecondary;
+  margin: 10px;
+  &:hover {
+    color: $textPrimary;
+  }
+}

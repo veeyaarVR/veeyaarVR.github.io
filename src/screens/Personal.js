@@ -1,3 +1,7 @@
+import ReactDOM from "react-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter, faInstagram, faReddit, faMedium } from "@fortawesome/free-brands-svg-icons";
+
 let interestList = [
   "Minimalism",
   "Atheism",
@@ -36,7 +40,6 @@ const shortStory = (
     A full-time Android Dev based in India, who also runs a{" "}
     <a
       href="https://www.youtube.com/channel/UCUjFwZ-SEMK5k-i24VzRu0w?sub_confirmation=1"
-      target="_blank"
       class="buttonText"
     >
       YouTube Channel
@@ -44,7 +47,6 @@ const shortStory = (
     and a{" "}
     <a
       href="https://beingaverageengineer.com/"
-      target="_blank"
       class="buttonText"
     >
       Blog
@@ -62,6 +64,7 @@ export default function Personal() {
       <IntroSection />
       <ShortStorySection />
       <LikesSection />
+      <SocialLinks />
     </div>
   );
 }
@@ -103,12 +106,55 @@ function LikesSection() {
     <div className="fullScreen flex flex-ai-c flex-jc-c superPadding">
       <div>
         <div className=" subHeadingEpilogueWhite subHeadingEpilogueWhite-align-center padding25">
-          If you could vibe to a lot of the below, we can be great friends 🙌
+          If you could vibe to a lot of the below, we can be great friends ✌️
         </div>
         <div className="likesContainer">
           {interestList.map((item, index) => {
             return <a class="interests buttonText">{item}</a>;
           })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SocialLinks() {
+  return (
+    <div className="fullScreen flex flex-ai-c flex-jc-c superPadding">
+      <div>
+        <div className=" subHeadingEpilogueWhite subHeadingEpilogueWhite-align-center padding25">
+          Connect with me even if you don't vibe with any of the above 🙌
+          <br></br> I desperately need some friends.
+        </div>
+        <div className="flex flex-ai-c flex-jc-c">
+          <a href="https://twitter.com/veeraakurilil">
+            <FontAwesomeIcon
+              className="socialIcon"
+              icon={faTwitter}
+              size="2x"
+            />
+          </a>
+          <a href="https://www.instagram.com/paal_paayasam/">
+            <FontAwesomeIcon
+              className="socialIcon"
+              icon={faInstagram}
+              size="2x"
+            />
+          </a>
+          <a href="https://www.reddit.com/user/VeeraaKurilil">
+            <FontAwesomeIcon
+              className="socialIcon"
+              icon={faReddit}
+              size="2x"
+            />
+          </a>
+          <a href="https://medium.com/@vigneshmarimuthu2302">
+            <FontAwesomeIcon
+              className="socialIcon"
+              icon={faMedium}
+              size="2x"
+            />
+          </a>
         </div>
       </div>
     </div>
