@@ -109,7 +109,8 @@ function LikesSection() {
         </div>
         <div className="likesContainer">
           {interestList.map((item, index) => {
-            return <a class="interests buttonText">{item}</a>;
+            let url = "https://www.google.com/search?q=" + item
+            return <a href={url} class="interests buttonText">{item}</a>;
           })}
         </div>
       </div>
