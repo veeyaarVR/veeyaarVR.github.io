@@ -36,6 +36,24 @@
   @include tablet {
     font-size: 1.10em ;
   }
+
+  &-align-center{
+    text-align: center;
+  }
+}
+
+.subHeadingFiraWhite{
+  font-family: "FiraCode", sans-serif;
+  font-size: 1.3em;
+  color: $textPrimary;
+
+  @include phone {
+    font-size: 1em;
+  }
+
+  @include tablet {
+    font-size: 1.10em ;
+  }
 }
 
 .buttonText {

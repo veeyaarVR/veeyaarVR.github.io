@@ -5,21 +5,31 @@
 .superPadding {
   padding-left: 15%;
   padding-right: 15%;
+
+  @include phone {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @include tablet {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
-.space{
+.space {
   height: 15px;
   width: 100%;
 }
 
-.flex{
+.flex {
   display: flex;
 
-  @include tablet{
+  @include tablet {
     flex-wrap: wrap;
   }
 
-  @include phone{
+  @include phone {
     flex-wrap: wrap;
   }
 
@@ -33,7 +43,7 @@
 
   &-ai-c {
     align-items: center;
-    @include phone{
+    @include phone {
       text-align: center;
     }
   }
@@ -43,6 +53,6 @@
   }
 }
 
-.fullScreen{
+.fullScreen {
   min-height: 100vh;
 }
