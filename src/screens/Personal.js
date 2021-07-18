@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faInstagram, faReddit, faMedium } from "@fortawesome/free-brands-svg-icons";
 
