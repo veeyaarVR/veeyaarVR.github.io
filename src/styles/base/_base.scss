@@ -18,7 +18,7 @@ body {
   box-sizing: inherit;
 }
 
-a {
+a,a:visited{
   text-decoration: none;
 }
 
@@ -28,5 +28,4 @@ h1,h2,h3,h4{
 
 p{
   white-space: pre-line;
-
 }

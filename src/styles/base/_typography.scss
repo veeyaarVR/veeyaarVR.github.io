@@ -10,8 +10,14 @@
   font-size: clamp(40px, 4vw, 80px);
 }
 
-.subHeadingFiraGreen {
-  font-family: "FiraCode", sans-serif;
+.titleEpilogueGreen {
+  color: $colorSecondary;
+  font-family: "Epilogue SemiBold", sans-serif;
+  font-size: 1.5em;
+}
+
+.smallHeadingFiraGreen {
+  font-family: "FiraCode Light", sans-serif;
   font-size: 1em;
   color: $colorSecondary;
 
@@ -23,6 +29,29 @@
     font-size: 1.10em ;
   }
 }
+
+.smallHeadingEpilogueWhite {
+  font-family: "Epilogue", sans-serif;
+  font-size: 1rem;
+  color: $textPrimary;
+
+}
+
+.smallHeadingEpilogueGreen{
+  font-family: "Epilogue", sans-serif;
+  font-size: 1rem;
+  color: $colorSecondary;
+
+  @include phone {
+    font-size: 1em;
+  }
+
+  @include tablet {
+    font-size: 1.10em ;
+  }
+}
+
+
 
 .subHeadingEpilogueWhite{
   font-family: "Epilogue", sans-serif;
