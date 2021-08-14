@@ -43,7 +43,7 @@ function CategoriesSection() {
       <div className="likesContainer">
         {data.categories.map((category) => {
           return (
-            <a className="interests buttonText" key={category.slug}>
+            <a className="interests buttonText" href="/personal/blog" key={category.slug}>
               {category.slug}
             </a>
           );
