@@ -2,33 +2,6 @@ import { useQuery } from "@apollo/client";
 import CATEGORIES_QUERY from "../queries/categories";
 import ARTICLES_QUERY from "../queries/articles";
 import { Link } from "react-router-dom";
-import { Component } from "react";
-
-let categoryList = [
-  "Politics",
-  "Fascism",
-  "Life",
-  "Fiction",
-  "Fantasy",
-  "Non-Fiction",
-  "Poem",
-  "Business",
-  "Self-help",
-  "Love",
-  "Philosophy",
-  "Religion",
-  "Mystery",
-  "Crime",
-];
-
-let booksList = [
-  "Paulo Coelho",
-  "Harry Potter",
-  "Ikigai",
-  "Paulo Coelho",
-  "Harry Potter",
-  "Ikigai",
-];
 
 export default function Blog() {
   return (

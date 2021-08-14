@@ -27,11 +27,7 @@ export default function App() {
             <Route exact path="/personal/blog/:id">
               <Book />
             </Route>
-            {/* <Route path="/personal/blog/:id" component={Book} exact /> */}
-
-
             <Route exact path="/">
-
             </Route>
           </Switch>
         </div>
