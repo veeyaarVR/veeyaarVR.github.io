@@ -4,6 +4,7 @@ import Home from "../screens/Home";
 import Personal from "../screens/Personal";
 import Professional from "../screens/Professional";
 import Blog from "../screens/Blog";
+import Book from "../screens/Book";
 import "../styles/styles.scss"
 
 export default function App() {
@@ -23,6 +24,12 @@ export default function App() {
             <Route exact path="/personal/blog">
               <Blog />
             </Route>
+            <Route exact path="/personal/blog/:id">
+              <Book />
+            </Route>
+            {/* <Route path="/personal/blog/:id" component={Book} exact /> */}
+
+
             <Route exact path="/">
 
             </Route>

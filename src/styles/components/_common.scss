@@ -39,6 +39,9 @@
 
   &-jc-start{
     justify-content: flex-start;
+    @include phone {
+      justify-content: center;
+    }
   }
 
   &-jc-c {
@@ -69,3 +72,4 @@
     color: $textPrimary;
   }
 }
+

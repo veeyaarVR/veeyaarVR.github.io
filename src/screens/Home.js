@@ -21,10 +21,10 @@ function UpperHalf() {
       </h1>
 
       <div className="flex flex-jc-start">
-        <a href="/personal" class="personal-link buttonText">
+        <a href="/personal" className="personal-link buttonText">
           Personal→
         </a>
-        <a href="/professional" class="personal-link buttonText">
+        <a href="/professional" className="personal-link buttonText">
           Professional→
         </a>
       </div>
