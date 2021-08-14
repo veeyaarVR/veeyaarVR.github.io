@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../screens/Home";
 import Personal from "../screens/Personal";
 import Professional from "../screens/Professional";
+import Blog from "../screens/Blog";
+import Book from "../screens/Book";
 import "../styles/styles.scss"
 
 export default function App() {
   return (
     <Router>
-        <div>
+        <div className="home">
           <Switch>
             <Route path="/" exact>
               <Home />
@@ -20,7 +22,12 @@ export default function App() {
               <Professional />
             </Route>
             <Route exact path="/personal/blog">
-              <Professional />
+              <Blog />
+            </Route>
+            <Route exact path="/personal/blog/:id">
+              <Book />
+            </Route>
+            <Route exact path="/">
             </Route>
           </Switch>
         </div>

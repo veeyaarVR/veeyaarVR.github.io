@@ -37,6 +37,13 @@
     justify-content: space-between;
   }
 
+  &-jc-start{
+    justify-content: flex-start;
+    @include phone {
+      justify-content: center;
+    }
+  }
+
   &-jc-c {
     justify-content: center;
   }
@@ -65,3 +72,4 @@
     color: $textPrimary;
   }
 }
+

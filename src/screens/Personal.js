@@ -72,13 +72,13 @@ function IntroSection() {
   return (
     <div className="fullScreen flex flex-ai-c superPadding">
       <div>
-        <h1 className="subHeadingFiraGreen">🤘 HI, I AM VIGNESH MARIMUTHU</h1>
+        <h1 className="smallHeadingFiraGreen">🤘 HI, I AM VIGNESH MARIMUTHU</h1>
         <div className="space"> </div>
         <h1 className="superTitleWhite" data-text="Vignesh Marimuthu">
           He/Him | Minimalist | Stoic | Atheist | Human
         </h1>
         <div className="space"> </div>
-        <a href="/personal" class="personal-link buttonText ">
+        <a href="/personal/blog" class="personal-link buttonText ">
           View Blog →
         </a>
       </div>
