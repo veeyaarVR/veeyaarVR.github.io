@@ -8,7 +8,7 @@ import {
 } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: `http://vigneshmarimuthu.herokuapp.com/graphql`,
+  uri: `https://vigneshmarimuthu.herokuapp.com/graphql`,
   cache: new InMemoryCache(),
 });
 
