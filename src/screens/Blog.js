@@ -35,7 +35,7 @@ function HeaderSection() {
 function CategoriesSection() {
   const { loading, error, data } = useQuery(CATEGORIES_QUERY);
 
-  if (loading) return <div></div>;
+  if (loading) return <div className="smallHeadingFiraGreen">Loading...!</div>;
   if (error) return `Error! ${error.message}`;
 
   if (data) {
