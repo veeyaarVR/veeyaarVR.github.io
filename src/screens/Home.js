@@ -15,7 +15,7 @@ export default function Home() {
 function UpperHalf() {
   return (
     <div className="homeContainer">
-      <h1 className="smallHeadingPrimary colorSecondary">👋 Hi, my name is</h1>
+      <h1 className="smallHeadingPrimary colorSecondary">👋 Hello there, my name is</h1>
       <h1 className="superTitlePrimary colorPrimary" data-text="Vignesh Marimuthu">
         Vignesh Marimuthu
       </h1>

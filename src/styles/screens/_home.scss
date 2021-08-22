@@ -1,6 +1,7 @@
 .homeContainer {
   @include center(both);
   text-align: left;
+  @include fadeIn();
 
   @include phone {
     text-align: center;

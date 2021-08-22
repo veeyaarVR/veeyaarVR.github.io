@@ -1,5 +1,7 @@
 .personal {
   height: fit-content;
+  @include fadeIn();
+
 }
 
 section {
