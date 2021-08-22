@@ -4,23 +4,41 @@
 
 a {
   text-decoration: none;
+  color: $colorSecondary
 }
 
 .content {
   font-family: "Petrona Regular";
   font-size: 1.25rem;
+  color: $colorPrimary;
+
 
   h1,h2,h3,h4,h5,h6{
     color: $colorSecondary;
   }
 
-  p{
-    color: $colorPrimary;
-  }
-
-  
 }
 
 .bottomLine {
   border-bottom: 1px solid rgba(0,0,0,.10);
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  padding: 15px;
+  background:$highlightColor;
+  border-radius: 5px;
+  font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;  
+  color: rgba(117, 117, 117, 1);
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
 }
