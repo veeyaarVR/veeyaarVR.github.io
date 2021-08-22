@@ -15,17 +15,17 @@ export default function Home() {
 function UpperHalf() {
   return (
     <div className="homeContainer">
-      <h1 className="smallHeadingFiraGreen">Hi, my name is</h1>
-      <h1 className="superTitleWhite" data-text="Vignesh Marimuthu">
+      <h1 className="smallHeadingPrimary colorSecondary">👋 Hi, my name is</h1>
+      <h1 className="superTitlePrimary colorPrimary" data-text="Vignesh Marimuthu">
         Vignesh Marimuthu
       </h1>
 
       <div className="flex flex-jc-start">
-        <a href="/personal" className="personal-link buttonText">
-          Personal→
+        <a href="/personal" className="personal-link buttonText colorSecondary">
+          Personal →
         </a>
-        <a href="/professional" className="personal-link buttonText">
-          Professional→
+        <a href="/professional" className="personal-link buttonText colorSecondary">
+          Professional →
         </a>
       </div>
     </div>

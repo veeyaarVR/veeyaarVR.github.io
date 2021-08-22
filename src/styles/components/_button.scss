@@ -10,7 +10,7 @@
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   &:hover {
-    background-color: $colorPrimary;
+    background-color: $colorBackground;
     text-decoration: none;
   }
 
@@ -31,12 +31,33 @@
 
   &:hover {
     outline: none;
-    background-color: $colorPrimary;
+    background-color: $colorBackground;
     text-decoration: none;
   }
 
   @include phone {
     margin-right: 0px;
     padding: 0.5rem 1.0rem;
+  }
+}
+
+.category-link {
+  background-color: $colorAccent;
+  border: 1px solid $colorSecondary;
+  border-radius: 5px;
+  page-break-inside: avoid;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover {
+    background-color: $colorBackground;
+    text-decoration: none;
+  }
+
+  @media (max-width: 480px) {
+    margin-right: 10px;
   }
 }

@@ -9,23 +9,31 @@ export default function Book() {
     variables: { id },
   });
 
-  if (loading) return <div className="fullScreen"></div>;
+  if (loading) {
+    return (
+      <div className="bookScreen superPadding blog">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
   if (error) return `Error! ${error.message}`;
 
   if (data) {
     return (
       <div className="bookScreen superPadding fullScreen">
-        <div className="padding25">
-          <h1 className="superTitleGreen " data-text="Vignesh Marimuthu">
+        <div className="padding25 bottomLine">
+          <h1
+            className="superTitlePrimary colorSecondary "
+            data-text="Vignesh Marimuthu"
+          >
             {data.articles[0].title}
           </h1>
-          <div className=" subHeadingEpilogueWhite">
+          <div className="subHeadingSecondary colorPrimary">
             by {data.articles[0].author.name}
           </div>
         </div>
 
-
-        <div className="content subHeadingEpilogueWhite padding25">
+        <div className="content padding25">
           <ReactMarkdown children={data.articles[0].content} />
         </div>
       </div>

@@ -6,9 +6,8 @@ const Query = ({ children, query, slug }) => {
     variables: { slug: slug },
   });
 
-  if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
-  return children({ data });
+  return children({ data ,loading});
 };
 
 export default Query;

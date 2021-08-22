@@ -1,98 +1,105 @@
-.superTitleWhite {
-  color: $textPrimary;
-  font-family: "Epilogue SemiBold", sans-serif;
-  font-size: clamp(40px, 4vw, 80px);
-}
-
-.superTitleGreen{
-  color: $colorSecondary;
-  font-family: "Epilogue SemiBold", sans-serif;
-  font-size: clamp(40px, 4vw, 80px);
-}
-
-.titleEpilogueGreen {
-  color: $colorSecondary;
-  font-family: "Epilogue SemiBold", sans-serif;
-  font-size: 1.5em;
-}
-
-.smallHeadingFiraGreen {
+.smallHeadingSecondary {
   font-family: "FiraCode Light", sans-serif;
   font-size: 1em;
-  color: $colorSecondary;
 
   @include phone {
     font-size: 1em;
   }
 
   @include tablet {
-    font-size: 1.10em ;
+    font-size: 1.1em;
   }
 }
 
-.smallHeadingEpilogueWhite {
-  font-family: "Epilogue", sans-serif;
-  font-size: 1rem;
-  color: $textPrimary;
-
-}
-
-.smallHeadingEpilogueGreen{
-  font-family: "Epilogue", sans-serif;
-  font-size: 1rem;
-  color: $colorSecondary;
+.smallHeadingPrimary {
+  font-family: "Petrona Light", sans-serif;
+  font-size: 1em;
 
   @include phone {
     font-size: 1em;
   }
 
   @include tablet {
-    font-size: 1.10em ;
+    font-size: 1.1em;
   }
 }
 
+.superTitlePrimary {
+  font-family: "Petrona SemiBold", sans-serif;
+  font-size: clamp(40px, 4vw, 80px);
+}
 
+.buttonText {
+  line-height: 1;
+  font-family: "Petrona SemiBold", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+}
 
-.subHeadingEpilogueWhite{
-  font-family: "Epilogue", sans-serif;
-  font-size: 1.5em;
-  color: $textPrimary;
+.subHeadingSecondary {
+  font-family: "FiraCode", sans-serif;
+  font-size: 1.3em;
 
   @include phone {
     font-size: 1em;
   }
 
   @include tablet {
-    font-size: 1.10em ;
+    font-size: 1.1em;
   }
 
-  &-align-center{
+  &-align-center {
     text-align: center;
   }
 }
 
-.subHeadingFiraWhite{
-  font-family: "FiraCode", sans-serif;
+.subHeadingPrimary {
+  font-family: "Petrona SemiBold", sans-serif;
   font-size: 1.3em;
-  color: $textPrimary;
 
   @include phone {
     font-size: 1em;
   }
 
   @include tablet {
-    font-size: 1.10em ;
+    font-size: 1.1em;
+  }
+
+  &-align-center {
+    text-align: center;
   }
 }
 
-.buttonText {
-  color: $colorSecondary;
+
+
+.titlePrimary {
+  font-family: "Petrona Bold", sans-serif;
+  font-size: 1.5em;
+}
+
+
+
+.categoryText {
   line-height: 1;
   font-family: "FiraCode", sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
   text-decoration: none;
-
-  &:hover {
-    color: $colorSecondary;
-  }
 }
+
+.colorPrimary {
+  color: $colorPrimary;
+}
+
+.colorSecondary {
+  color: $colorSecondary;
+}
+
+.colorAccent {
+  color: $colorAccent;
+}
+
+.colorBackground {
+  color: $colorAccent;
+}
+
+
