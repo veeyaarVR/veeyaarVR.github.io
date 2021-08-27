@@ -6,6 +6,10 @@ import {
   InMemoryCache,
   ApolloProvider,
 } from "@apollo/client";
+import ReactGA from "react-ga";
+
+
+ReactGA.initialize('UA-206068733-1');
 
 const client = new ApolloClient({
   uri: `https://vigneshmarimuthu.herokuapp.com/graphql`,

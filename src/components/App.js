@@ -6,10 +6,16 @@ import Professional from "../screens/Professional";
 import Blog from "../screens/Blog";
 import Book from "../screens/Book";
 import "../styles/styles.scss"
-import ReactGA from "react-ga";
+import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
 
+const history = createBrowserHistory();
+// Initialize google analytics page view tracking
+history.listen(location => {
+  ReactGA.set({ page: location.pathname }); // Update the user's current page
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
 
-ReactGA.initialize('UA-206068733-1');
 export default function App() {
   return (
     <Router>
