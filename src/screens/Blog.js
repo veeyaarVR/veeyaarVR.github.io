@@ -29,7 +29,7 @@ function HeaderSection() {
       <div className="subHeadingSecondary colorPrimary">
         You can find my Book Notes and Summary of my very favourite books here.
         Please note, that these are not a review of the book, but simply my
-        observations of how I percieved the book.
+        observations of how I perceived the book.
       </div>
       <div className="space"></div>
       <div className="space"></div>

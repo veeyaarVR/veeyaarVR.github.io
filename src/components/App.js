@@ -6,7 +6,10 @@ import Professional from "../screens/Professional";
 import Blog from "../screens/Blog";
 import Book from "../screens/Book";
 import "../styles/styles.scss"
+import ReactGA from "react-ga";
 
+
+ReactGA.initialize('UA-206068733-1');
 export default function App() {
   return (
     <Router>
