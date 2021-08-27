@@ -9,6 +9,7 @@ import "../styles/styles.scss"
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 
+ReactGA.initialize('UA-206068733-1');
 const history = createBrowserHistory();
 // Initialize google analytics page view tracking
 history.listen(location => {
