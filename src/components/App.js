@@ -9,10 +9,10 @@ import "../styles/styles.scss"
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 
-ReactGA.initialize('UA-206068733-1');
+ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
 const history = createBrowserHistory();
 // Initialize google analytics page view tracking
-history.listen(location => {
+history.listen(location => { 
   ReactGA.set({ page: location.pathname }); // Update the user's current page
   ReactGA.pageview(location.pathname); // Record a pageview for the given page
 });

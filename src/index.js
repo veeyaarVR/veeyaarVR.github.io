@@ -8,9 +8,9 @@ import {
 } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: `https://vigneshmarimuthu.herokuapp.com/graphql`,
+  uri: `${process.env.REACT_APP_BACKEND_URL}`,
   cache: new InMemoryCache(),
-});
+}); 
 
 ReactDOM.render(
   <React.StrictMode>
