@@ -10,15 +10,12 @@ import ReactGA from 'react-ga';
 
 
 function usePageViews() {
-  let location = useLocation();
-  useEffect(() => {
-    if(!window.GA_INITIALIZED) {
-      ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
-      window.GA_INITIALIZED = true;
-    }
-    ReactGA.set({ page: location.pathname }); // Update the user's current page
-  ReactGA.pageview(location.pathname); // Record a pageview for the given page
-  }, [location])
+	let location = useLocation();
+	useEffect(() => {
+		InitializeReactGA(ReactGA);
+		ReactGA.set({ page: location.pathname });
+		ReactGA.pageview(location.pathname);
+	}, [location]);
 }
 
 export default function App() {
