@@ -1,23 +1,23 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "../screens/Home";
-import Personal from "../screens/Personal";
-import Professional from "../screens/Professional";
-import Blog from "../screens/Blog";
-import Book from "../screens/Book";
+import React , {useEffect}from "react";
+import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
+import {Home, Personal, Professional, Blog, Book} from "../screens";
 import "../styles/styles.scss"
 import ReactGA from 'react-ga';
-import { createBrowserHistory } from 'history';
 
-ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
-const history = createBrowserHistory();
-// Initialize google analytics page view tracking
-history.listen(location => { 
-  ReactGA.set({ page: location.pathname }); // Update the user's current page
+function usePageViews() {
+  let location = useLocation();
+  useEffect(() => {
+    if(!window.GA_INITIALIZED) {
+      ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
+      window.GA_INITIALIZED = true;
+    }
+    ReactGA.set({ page: location.pathname }); // Update the user's current page
   ReactGA.pageview(location.pathname); // Record a pageview for the given page
-});
+  }, [location])
+}
 
 export default function App() {
+  usePageViews();
   return (
     <Router>
         <div className="home">
