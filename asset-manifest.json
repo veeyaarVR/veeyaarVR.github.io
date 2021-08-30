@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.e20c4d38.chunk.css",
-    "main.js": "/static/js/main.b4084321.chunk.js",
-    "main.js.map": "/static/js/main.b4084321.chunk.js.map",
+    "main.js": "/static/js/main.0dcf8072.chunk.js",
+    "main.js.map": "/static/js/main.0dcf8072.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.157959c9.js",
     "runtime-main.js.map": "/static/js/runtime-main.157959c9.js.map",
-    "static/js/2.786f5e76.chunk.js": "/static/js/2.786f5e76.chunk.js",
-    "static/js/2.786f5e76.chunk.js.map": "/static/js/2.786f5e76.chunk.js.map",
+    "static/js/2.1d6d64be.chunk.js": "/static/js/2.1d6d64be.chunk.js",
+    "static/js/2.1d6d64be.chunk.js.map": "/static/js/2.1d6d64be.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.e20c4d38.chunk.css.map": "/static/css/main.e20c4d38.chunk.css.map",
-    "static/js/2.786f5e76.chunk.js.LICENSE.txt": "/static/js/2.786f5e76.chunk.js.LICENSE.txt",
+    "static/js/2.1d6d64be.chunk.js.LICENSE.txt": "/static/js/2.1d6d64be.chunk.js.LICENSE.txt",
     "static/media/styles.scss": "/static/media/Petrona-SemiBold.05da2459.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.157959c9.js",
-    "static/js/2.786f5e76.chunk.js",
+    "static/js/2.1d6d64be.chunk.js",
     "static/css/main.e20c4d38.chunk.css",
-    "static/js/main.b4084321.chunk.js"
+    "static/js/main.0dcf8072.chunk.js"
   ]
 }
