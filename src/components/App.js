@@ -1,8 +1,13 @@
 import React , {useEffect}from "react";
 import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
-import {Home, Personal, Professional, Blog, Book} from "../screens";
+import Home from "../screens/Home";
+import Personal from "../screens/Personal";
+import Professional from "../screens/Professional";
+import Blog from "../screens/Blog";
+import Book from "../screens/Book";
 import "../styles/styles.scss"
 import ReactGA from 'react-ga';
+
 
 function usePageViews() {
   let location = useLocation();
