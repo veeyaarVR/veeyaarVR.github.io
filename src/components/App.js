@@ -7,7 +7,7 @@ import Blog from "../screens/Blog";
 import Book from "../screens/Book";
 import "../styles/styles.scss"
 import ReactGA from 'react-ga';
-
+import InitializeReactGA from "../helpers/googleAnalytics";
 
 function usePageViews() {
 	let location = useLocation();
