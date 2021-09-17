@@ -1,0 +1,2 @@
+Add framer animation to button clicks and pop ups
+Got this idea from --> https://www.youtube.com/watch?v=SuqU904ZHA4
