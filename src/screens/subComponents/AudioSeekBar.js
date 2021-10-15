@@ -1,9 +1,8 @@
-import React from "react";
 import { useAudioPosition } from "react-use-audio-player";
 import ProgressBar from "./ProgressBar";
 
 const AudioSeekBar = () => {
-  const { percentComplete, duration, seek } = useAudioPosition({
+  const { percentComplete } = useAudioPosition({
     highRefreshRate: true,
   });
 
