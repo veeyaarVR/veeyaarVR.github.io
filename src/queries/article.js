@@ -12,6 +12,9 @@ const ARTICLE_QUERY = gql`
       author{
         name
       }
+      audio {
+        url
+      }
     }
   }
 `;

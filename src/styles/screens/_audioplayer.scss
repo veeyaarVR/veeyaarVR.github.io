@@ -1,0 +1,35 @@
+.playPauseButton {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 5px;
+}
+
+.player {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  @include phone {
+    width: 100%;
+  }
+
+  @include tablet {
+    width: 80%;
+  }
+}
+
+.progressContainer {
+  height: 10px;
+  width: 100%;
+  margin: 5px;
+  background-color: #e0e0de;
+  border-radius: 30px;
+  align-self: center;
+}
+.progressFiller {
+  height: 100%;
+  background-color: $colorPrimary;
+  border-radius: inherit;
+  text-align: right;
+}
