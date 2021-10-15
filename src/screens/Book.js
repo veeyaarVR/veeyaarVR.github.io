@@ -49,11 +49,13 @@ export default function Book() {
 function ShowAudioComponent({ data }) {
   if (data.articles[0].audio != null) {
     return (
-      <div className="player">
-        <AudioPlayerProvider>
-          <AudioComponent url={data.articles[0].audio.url} />
-          <AudioSeekBar />
-        </AudioPlayerProvider>
+      <div className="bottomPadding">
+        <div className="player">
+          <AudioPlayerProvider>
+            <AudioComponent url={data.articles[0].audio.url} />
+            <AudioSeekBar />
+          </AudioPlayerProvider>
+        </div>
       </div>
     );
   } else {
