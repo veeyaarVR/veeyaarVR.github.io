@@ -49,7 +49,7 @@ function CategoriesSection({ onSelectCategory, selectedCategory }) {
           if (data) {
             return (
               <div className="categoriesContainer">
-                {selectedCategory == "All" ? (
+                {selectedCategory === "All" ? (
                   <button
                     // eslint-disable-next-line
                     href="javascript:void(0)"
