@@ -12,7 +12,10 @@ export default function Blog() {
   return (
     <div className="blog superPadding fullScreen">
       <HeaderSection />
-      <CategoriesSection onSelectCategory={updateCategory} />
+      <CategoriesSection
+        onSelectCategory={updateCategory}
+        selectedCategory={category}
+      />
       <div className="space"></div>
       <div className="space"></div>
       <BooksSection category={category} />
@@ -37,7 +40,7 @@ function HeaderSection() {
   );
 }
 
-function CategoriesSection({ onSelectCategory }) {
+function CategoriesSection({ onSelectCategory, selectedCategory }) {
   return (
     <div>
       <Query query={CATEGORIES_QUERY}>
@@ -46,24 +49,50 @@ function CategoriesSection({ onSelectCategory }) {
           if (data) {
             return (
               <div className="categoriesContainer">
-                <button
-                  // eslint-disable-next-line
-                  href="javascript:void(0)"
-                  className="category-link categoryText colorSecondary"
-                  onClick={() => onSelectCategory("All")}
-                >
-                  All
-                </button>
+                {selectedCategory == "All" ? (
+                  <button
+                    // eslint-disable-next-line
+                    href="javascript:void(0)"
+                    className={"categoryText colorSecondary category-selected"}
+                    onClick={() => onSelectCategory("All")}
+                  >
+                    All
+                  </button>
+                ) : (
+                  <button
+                    // eslint-disable-next-line
+                    href="javascript:void(0)"
+                    className={"categoryText colorSecondary category-link"}
+                    onClick={() => onSelectCategory("All")}
+                  >
+                    All
+                  </button>
+                )}
+
                 {data.categories.map((category) => {
-                  return (
-                    <button
-                      className="category-link categoryText colorSecondary"
-                      key={category.slug}
-                      onClick={() => onSelectCategory(category.name)}
-                    >
-                      {category.name}
-                    </button>
-                  );
+                  console.log(String(selectedCategory));
+
+                  if (String(selectedCategory) === category.name) {
+                    return (
+                      <button
+                        className="category-selected categoryText colorSecondary"
+                        key={category.slug}
+                        onClick={() => onSelectCategory(category.name)}
+                      >
+                        {category.name}
+                      </button>
+                    );
+                  } else {
+                    return (
+                      <button
+                        className="category-link categoryText colorSecondary"
+                        key={category.slug}
+                        onClick={() => onSelectCategory(category.name)}
+                      >
+                        {category.name}
+                      </button>
+                    );
+                  }
                 })}
               </div>
             );
