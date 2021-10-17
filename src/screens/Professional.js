@@ -4,12 +4,12 @@ export default function Professional() {
       <h2 className="colorSecondary">About Me</h2>
       <p className="subHeadingPrimary colorPrimary  align-center ">
         Developing android apps for B2B and B2C clients for the past
-        <a> 3 years </a> and developing applications using the amazing cross
+        <a href="/#" > 3 years </a> and developing applications using the amazing cross
         development platform,
-        <a className="highlight"> Flutter </a> for the past
-        <a className="highlight"> 1.5 years. </a>
+        <a href="/#"  className="highlight"> Flutter </a> for the past
+        <a href="/#" className="highlight"> 1.5 years. </a>
         Currently based in
-        <a className="highlight"> Madurai, TamilNadu </a>
+        <a href="/#" className="highlight"> Madurai, TamilNadu </a>
         and would love to discuss on coding, android apps, politics, movies or
         books over a cup of coffee ☕
       </p>
