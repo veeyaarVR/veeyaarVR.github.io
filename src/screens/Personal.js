@@ -87,8 +87,8 @@ function IntroSection() {
 
 function ShortStorySection() {
   return (
-    <div className="fullScreen">
-      <div className="flex flex-jc-sa flex-ai-c superPadding">
+    <div className="">
+      <div className="superPaddingVertical flex flex-jc-sa flex-ai-c superPadding">
         <h1 className="superTitlePrimary  padding25 colorSecondary" data-text="Vignesh Marimuthu">
           ShortStory
         </h1>
@@ -100,7 +100,7 @@ function ShortStorySection() {
 
 function LikesSection() {
   return (
-    <div className="fullScreen flex flex-ai-c flex-jc-c superPadding">
+    <div className="superPaddingVertical flex flex-ai-c flex-jc-c superPadding">
       <div>
         <div className="subHeadingPrimary subHeadingSecondary-align-center padding25 colorPrimary">
           If you could vibe to a lot of the below, we can be great friends ✌️
