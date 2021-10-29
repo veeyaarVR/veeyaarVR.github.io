@@ -24,6 +24,17 @@ export default function Book() {
   if (data) {
     return (
       <div className="bookScreen superPadding fullScreen">
+      <div className="colorPrimary paddingVertical  homeLink">
+        <div className="space"></div>
+        <div className="space"></div>
+        <p>
+          <a href="/">VIGNESH MARIMUTHU </a> /
+          <a href="/personal"> PERSONAL </a> / 
+          <a href="/personal"> BLOG </a> / 
+
+        </p>
+        <div className="bottomLine"> </div>
+      </div>
         <div className="padding25 bottomLine">
           <h1
             className="superTitlePrimary colorSecondary "

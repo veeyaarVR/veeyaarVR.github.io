@@ -11,6 +11,15 @@ export default function Blog() {
 
   return (
     <div className="blog superPadding fullScreen">
+      <div className="colorPrimary paddingVertical  homeLink">
+        <div className="space"></div>
+        <div className="space"></div>
+        <p>
+          <a href="/">VIGNESH MARIMUTHU </a> /
+          <a href="/personal"> PERSONAL </a> / 
+        </p>
+        <div className="bottomLine"> </div>
+      </div>
       <HeaderSection />
       <CategoriesSection
         onSelectCategory={updateCategory}
@@ -26,7 +35,6 @@ export default function Blog() {
 function HeaderSection() {
   return (
     <div>
-      <div className="space"></div>
       <div className="space"></div>
       <div className="superTitlePrimary colorSecondary">Book Notes</div>
       <div className="subHeadingSecondary colorPrimary">
