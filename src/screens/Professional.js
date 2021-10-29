@@ -1,10 +1,13 @@
 export default function Professional() {
   return (
     <div class="headerInfo padding25 superPadding">
+      <div href="#" className="colorPrimary bottomLine homeLink"><a href="/">↩ VIGNESH MARIMUTHU</a></div>
+      <div className="space">&nbsp;</div>
+      <div className="space">&nbsp;</div>
       <h2 className="colorSecondary">About Me</h2>
       <p className="subHeadingPrimary colorPrimary  align-center ">
         Developing android apps for B2B and B2C clients for the past
-        <a href="/#" > 3 years </a> and developing applications using the amazing cross
+        <a href="/#" className="highlight" > 3 years </a> and developing applications using the amazing cross
         development platform,
         <a href="/#"  className="highlight"> Flutter </a> for the past
         <a href="/#" className="highlight"> 1.5 years. </a>
@@ -78,11 +81,11 @@ export default function Professional() {
             Cumulations Pvt Ltd., Bangalore
           </div>
           <div className="dateText colorSecondary companyDate">
-            Dec 2020 - Present
+            Jan 2020 - Present
           </div>
         </div>
         <div className="colorSecondary companyName categoryText ">
-          Android Developer
+          Android and Flutter Developer
         </div>
         <div className="space">&nbsp;</div>
         <div className="companyInfo">
@@ -90,11 +93,11 @@ export default function Professional() {
             Abservetech Pvt Ltd., Madurai
           </div>
           <div className="dateText colorSecondary companyDate">
-            Sept 2018 - Dec 2020
+            Sept 2018 - Dec 2019
           </div>
         </div>
         <div className="colorSecondary companyName categoryText">
-          Android and Flutter Developer
+          Android Developer
         </div>
       </div>
 

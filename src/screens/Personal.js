@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faInstagram, faReddit, faMedium } from "@fortawesome/free-brands-svg-icons";
+import {
+  faTwitter,
+  faInstagram,
+  faReddit,
+  faMedium,
+} from "@fortawesome/free-brands-svg-icons";
 
 let interestList = [
   "Minimalism",
@@ -60,6 +65,10 @@ const shortStory = (
 export default function Personal() {
   return (
     <div className="personal">
+      <div className="colorPrimary padding25  homeLink centerHorizontal">
+        <a href="/">⌂ VIGNESH MARIMUTHU</a>
+        <div className="bottomLine"> </div>
+      </div>
       <IntroSection />
       <ShortStorySection />
       <LikesSection />
@@ -70,14 +79,22 @@ export default function Personal() {
 
 function IntroSection() {
   return (
-    <div className="fullScreen flex flex-ai-c superPadding">
+    <div className="fullScreen flex flex-jc-c flex-ai-c superPadding">
       <div>
-        <h1 className="smallHeadingPrimary colorSecondary">🤘 HI, I AM VIGNESH MARIMUTHU</h1>
-        <h1 className="superTitlePrimary colorPrimary" data-text="Vignesh Marimuthu">
+        <h1 className="smallHeadingPrimary colorSecondary">
+          🤘 HI, I AM VIGNESH MARIMUTHU
+        </h1>
+        <h1
+          className="superTitlePrimary colorPrimary"
+          data-text="Vignesh Marimuthu"
+        >
           He/Him | Minimalist | Stoic | Atheist | Human
         </h1>
         <div className="space"> </div>
-        <a href="/personal/blog" className="personal-link buttonText colorSecondary">
+        <a
+          href="/personal/blog"
+          className="personal-link buttonText colorSecondary"
+        >
           View Blog →
         </a>
       </div>
@@ -89,10 +106,15 @@ function ShortStorySection() {
   return (
     <div className="">
       <div className="superPaddingVertical flex flex-jc-sa flex-ai-c superPadding">
-        <h1 className="superTitlePrimary  padding25 colorSecondary" data-text="Vignesh Marimuthu">
+        <h1
+          className="superTitlePrimary  padding25 colorSecondary"
+          data-text="Vignesh Marimuthu"
+        >
           ShortStory
         </h1>
-        <p className="subHeadingSecondary padding25 colorPrimary textAlignCenter">{shortStory}</p>
+        <p className="subHeadingSecondary padding25 colorPrimary textAlignCenter">
+          {shortStory}
+        </p>
       </div>
     </div>
   );
@@ -107,8 +129,16 @@ function LikesSection() {
         </div>
         <div className="likesContainer">
           {interestList.map((item, index) => {
-            let url = "https://www.google.com/search?q=" + item
-            return <a href={url} key={url} className="interests buttonText colorSecondary">{item}</a>;
+            let url = "https://www.google.com/search?q=" + item;
+            return (
+              <a
+                href={url}
+                key={url}
+                className="interests buttonText colorSecondary"
+              >
+                {item}
+              </a>
+            );
           })}
         </div>
       </div>
@@ -140,18 +170,10 @@ function SocialLinks() {
             />
           </a>
           <a href="https://www.reddit.com/user/VeeraaKurilil">
-            <FontAwesomeIcon
-              className="socialIcon"
-              icon={faReddit}
-              size="2x"
-            />
+            <FontAwesomeIcon className="socialIcon" icon={faReddit} size="2x" />
           </a>
           <a href="https://medium.com/@vigneshmarimuthu2302">
-            <FontAwesomeIcon
-              className="socialIcon"
-              icon={faMedium}
-              size="2x"
-            />
+            <FontAwesomeIcon className="socialIcon" icon={faMedium} size="2x" />
           </a>
         </div>
       </div>

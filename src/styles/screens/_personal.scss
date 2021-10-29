@@ -43,6 +43,10 @@ section {
   @include center(vertical);
 }
 
+.centerHorizontal {
+  @include center(horizontal);
+}
+
 //from tutorials
 .headerLogo {
   height: 40px;
