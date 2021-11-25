@@ -73,6 +73,7 @@ export default function Personal() {
       <ShortStorySection />
       <LikesSection />
       <SocialLinks />
+      <WishListInfo />
     </div>
   );
 }
@@ -122,7 +123,7 @@ function ShortStorySection() {
 
 function LikesSection() {
   return (
-    <div className="superPaddingVertical flex flex-ai-c flex-jc-c superPadding">
+    <div className="fullScreen superPaddingVertical flex flex-ai-c flex-jc-c superPadding">
       <div>
         <div className="subHeadingPrimary subHeadingSecondary-align-center padding25 colorPrimary">
           If you could vibe to a lot of the below, we can be great friends ✌️
@@ -148,9 +149,9 @@ function LikesSection() {
 
 function SocialLinks() {
   return (
-    <div className="fullScreen flex flex-ai-c flex-jc-c superPadding">
+    <div className="flex flex-ai-c flex-jc-c superPadding">
       <div>
-        <div className=" subHeadingSecondary colorSecondary subHeadingSecondary-align-center padding25">
+        <div className="subHeadingSecondary colorSecondary subHeadingSecondary-align-center padding25">
           Connect with me even if you don't vibe with any of the above 🙌
           <br></br> I desperately need some friends.
         </div>
@@ -177,6 +178,33 @@ function SocialLinks() {
           </a>
         </div>
       </div>
+    </div>
+  );
+}
+
+function WishListInfo() {
+  return (
+    <div className="flex flex-ai-c flex-jc-c ">
+      <div>
+        <div className=" subHeadingSecondary colorPrimary subHeadingSecondary-align-center padding25">
+          Incase and unfortunately, if you already my friend 😅
+          <br></br> I have shamelessly made a wishlist of things, that you can
+          gift me 🥳
+        </div>
+        <div className="flex flex-ai-c flex-jc-c">
+          <a
+            href="/personal/wishlist"
+            className="personal-link buttonText colorSecondary"
+          >
+            My Wishlist →
+          </a>
+        </div>
+        <div className="space"></div>
+      <div className="space"></div>
+      <div className="space"></div>
+      <div className="space"></div>
+      </div>
+
     </div>
   );
 }

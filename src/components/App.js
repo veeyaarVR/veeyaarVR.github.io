@@ -12,6 +12,8 @@ import Book from "../screens/Book";
 import "../styles/styles.scss";
 import ReactGA from "react-ga";
 import InitializeReactGA from "../helpers/googleAnalytics";
+import Wishlist from "../screens/Wishlist";
+import NotFound from "../screens/NotFound";
 
 function usePageViews() {
   let location = useLocation();
@@ -44,6 +46,14 @@ export default function App() {
             <Book />
           </Route>
           <Route exact path="/"></Route>
+          <Route exact path="/personal/wishlist">
+            <Wishlist />
+          </Route>
+          <Route path="">
+          <NotFound />
+
+          </Route>
+
         </Switch>
       </div>
     </main>
