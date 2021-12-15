@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import AudioComponent from "./subComponents/AudioComponent";
 import { AudioPlayerProvider } from "react-use-audio-player";
 import AudioSeekBar from "./subComponents/AudioSeekBar";
+import { Helmet } from "react-helmet";
 
 export default function Book() {
   let { id } = useParams();
@@ -23,34 +24,39 @@ export default function Book() {
 
   if (data) {
     return (
-      <div className="bookScreen superPadding fullScreen">
-      <div className="colorPrimary paddingVertical  homeLink">
-        <div className="space"></div>
-        <div className="space"></div>
-        <p>
-          <a href="/">VIGNESH MARIMUTHU </a> /
-          <a href="/personal"> PERSONAL </a> / 
-          <a href="/personal"> BLOG </a> / 
-
-        </p>
-        <div className="bottomLine"> </div>
-      </div>
-        <div className="padding25 bottomLine">
-          <h1
-            className="superTitlePrimary colorSecondary "
-            data-text="Vignesh Marimuthu"
-          >
-            {data.articles[0].title}
-          </h1>
-
-          <div className="subHeadingSecondary colorPrimary">
-            by {data.articles[0].author.name}
+      <div>
+        <Helmet>
+          <title>{data.articles[0].title} | Book Notes | Vignesh Marimuthu</title>
+          <meta name="keywords" content="Book notes, Vignesh Marimuthu" />
+        </Helmet>
+        <div className="bookScreen superPadding fullScreen">
+          <div className="colorPrimary paddingVertical  homeLink">
+            <div className="space"></div>
+            <div className="space"></div>
+            <p>
+              <a href="/">VIGNESH MARIMUTHU </a> /
+              <a href="/personal"> PERSONAL </a> /
+              <a href="/personal/blog"> BLOG </a> /
+            </p>
+            <div className="bottomLine"> </div>
           </div>
-        </div>
+          <div className="padding25 bottomLine">
+            <h1
+              className="superTitlePrimary colorSecondary "
+              data-text="Vignesh Marimuthu"
+            >
+              {data.articles[0].title}
+            </h1>
 
-        <div className="content padding25">
-          <ShowAudioComponent data={data} />
-          <ReactMarkdown children={data.articles[0].content} />
+            <div className="subHeadingSecondary colorPrimary">
+              by {data.articles[0].author.name}
+            </div>
+          </div>
+
+          <div className="content padding25">
+            <ShowAudioComponent data={data} />
+            <ReactMarkdown children={data.articles[0].content} />
+          </div>
         </div>
       </div>
     );
