@@ -30,9 +30,9 @@ export default function Book() {
           <meta property="og:url" content="https://help.twitter.com/en/using-twitter/add-twitter-share-button" />
           <meta property="og:type" content="article" />
           <meta name="keywords" content="Book notes, Vignesh Marimuthu" />
-          <meta name="og:title" content={data.articles[0].title} />
-          <meta name="og:description" content="" />
-          <meta name="og:image" content={data.articles[0].image.url} />
+          <meta property="og:title" content={data.articles[0].title} />
+          <meta property="og:description" content="" />
+          <meta property="og:image" content={data.articles[0].image.url} />
           <meta name="twitter:widgets:new-embed-design" content="on" />
           <meta name="twitter:widgets:csp" content="on"></meta>
           <meta name="twitter:card" content="summary"></meta>
