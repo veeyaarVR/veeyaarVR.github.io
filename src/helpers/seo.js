@@ -8,4 +8,9 @@ export function seo(data = {}) {
   document
     .querySelector('meta[name="description"]')
     .setAttribute("content", data.metaDescription);
+  document
+    .querySelector('meta[name="description"]')
+    .setAttribute("content", data.metaDescription);
+  document.querySelector('meta[name="og:title"]').setAttribute("content",data.title);
+  document.querySelector('meta[name="og:description"]').setAttribute('content',data.metaDescription);
 }

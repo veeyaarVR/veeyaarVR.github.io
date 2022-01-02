@@ -16,12 +16,13 @@ function usePageViews() {
   let location = useLocation();
 
   const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
   useEffect(() => {
     seo({
       title: title,
-      metaDescription: "",
+      metaDescription: description,
     });
-  }, [title]);
+  }, [title,description]);
 
   useEffect(() => {
     InitializeReactGA(ReactGA);
@@ -31,16 +32,23 @@ function usePageViews() {
     // set title based on page
     switch (location.pathname) {
       case "":
-        return setTitle("Page Not found");
+        setDescription("Please visit vigneshmarimuthu.com");
+        setTitle("Page Not found");
+        return
       case "/":
+        setDescription("personal Portfolio website of an Average Engineer");
         return setTitle("");
       case "/personal":
+        setDescription("Personal details and stuff about Vignesh Marimuthu");
         return setTitle("Personal | Vignesh Marimuthu");
       case "/professional":
+        setDescription("Professional details and portfolio about Vignesh Marimuthu");
         return setTitle("Professional | Vignesh Marimuthu");
       case "/personal/blog":
+        setDescription("Collection of my book notes");
         return setTitle("Blog | Vignesh Marimuthu");
       case "/personal/wishlist":
+        setDescription("Thinking about gifting me?");
         return setTitle("Wishlist | Vignesh Marimuthu");
       default:
         return setTitle("");
