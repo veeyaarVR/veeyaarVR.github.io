@@ -11,6 +11,6 @@ export function seo(data = {}) {
   document
     .querySelector('meta[name="description"]')
     .setAttribute("content", data.metaDescription);
-  document.querySelector('meta[property="og:title"]').setAttribute("content",data.title);
-  document.querySelector('meta[property="og:description"]').setAttribute('content',data.metaDescription);
+  document.querySelector('meta[name="twitter:title"]').setAttribute("content",data.title);
+  document.querySelector('meta[name="twitter:description"]').setAttribute('content',data.metaDescription);
 }
