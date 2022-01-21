@@ -14,8 +14,11 @@ let interestList = [
   "Nolan Movies",
   "U1 Songs",
   "Solo Bike Rides",
+  "F.R.I.E.N.D.S",
+  "Game of Thrones",
   "Mech KB",
   "Coding",
+  "Harmonica",
   "Sci-Fi Movies",
   "Vijay Antony",
   "Torantino",
@@ -56,10 +59,10 @@ const shortStory = (
       Blog
     </a>
     , where I post and write tech tutorials. (Yeah! Nerd.)<br></br>
-    <br></br>Selectively social, constant learner, cis-het, rarely creative,
-    occasionally good lookin and an abnormal human.<br></br>
-    <br></br>I am that guy, who cuts your call and texts you back, I'll call you
-    later, but never does.
+    <br></br>Selectively social, constant learner, cis-het, creative at night, motivated during shower,
+    occasionally good lookin and a humble human being. Belongs to House Targaryen.<br></br>
+    <br></br>I am that guy, who cuts your call and texts you back, <i>I'll call you
+    later</i>, but never does.
   </>
 );
 export default function Personal() {
@@ -96,7 +99,13 @@ function IntroSection() {
           href="/personal/blog"
           className="personal-link buttonText colorSecondary"
         >
-          View Blog →
+          Blog →
+        </a>
+        <a
+          href="/personal/scribbles"
+          className="personal-link buttonText colorSecondary"
+        >
+          Scribbles →
         </a>
       </div>
     </div>
@@ -163,13 +172,6 @@ function SocialLinks() {
               size="2x"
             />
           </a>
-          <a href="https://www.instagram.com/paal_paayasam/">
-            <FontAwesomeIcon
-              className="socialIcon"
-              icon={faInstagram}
-              size="2x"
-            />
-          </a>
           <a href="https://www.reddit.com/user/VeeraaKurilil">
             <FontAwesomeIcon className="socialIcon" icon={faReddit} size="2x" />
           </a>
@@ -187,7 +189,7 @@ function WishListInfo() {
     <div className="flex flex-ai-c flex-jc-c ">
       <div>
         <div className=" subHeadingSecondary colorPrimary subHeadingSecondary-align-center padding25">
-          Incase and unfortunately, if you already my friend 😅
+          Incase and unfortunately, if you are already my friend 😅
           <br></br> I have shamelessly made a wishlist of things, that you can
           gift me 🥳
         </div>

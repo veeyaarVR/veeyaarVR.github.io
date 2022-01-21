@@ -1,0 +1,12 @@
+.scribblesList {
+    padding-top: 10px;
+}
+
+.scribbleItem {
+    color: $textColor;
+    &:hover {
+        color: $colorSecondary;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

@@ -5,6 +5,8 @@ import Personal from "../screens/Personal";
 import Professional from "../screens/Professional";
 import Blog from "../screens/Blog";
 import Book from "../screens/Book";
+import Scribbles from "../screens/scribbleSection/Scribbles";
+import ScribbleContent from "../screens/scribbleSection/ScribbleContent";
 import "../styles/styles.scss";
 import ReactGA from "react-ga";
 import InitializeReactGA from "../helpers/googleAnalytics";
@@ -22,7 +24,7 @@ function usePageViews() {
       title: title,
       metaDescription: description,
     });
-  }, [title,description]);
+  }, [title, description]);
 
   useEffect(() => {
     InitializeReactGA(ReactGA);
@@ -47,6 +49,9 @@ function usePageViews() {
       case "/personal/blog":
         setDescription("Collection of my book notes");
         return setTitle("Blog | Vignesh Marimuthu");
+      case "/personal/scribbles":
+        setDescription("Some random shit that I scribbled");
+        return setTitle("Scribbles | Vignesh Marimuthu");
       case "/personal/wishlist":
         setDescription("Thinking about gifting me?");
         return setTitle("Wishlist | Vignesh Marimuthu");
@@ -74,8 +79,14 @@ export default function App() {
           <Route exact path="/personal/blog">
             <Blog />
           </Route>
+          <Route exact path="/personal/scribbles">
+            <Scribbles />
+          </Route>
           <Route exact path="/personal/blog/:id">
             <Book />
+          </Route>
+          <Route exact path="/personal/scribbles/:id">
+            <ScribbleContent />
           </Route>
           <Route exact path="/personal/wishlist">
             <Wishlist />
