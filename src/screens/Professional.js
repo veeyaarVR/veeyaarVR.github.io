@@ -147,7 +147,7 @@ function ProjectComponent({ data }) {
       <div className="space">&nbsp;</div>
       <div className="space">&nbsp;</div>
 
-      <a href="#" className="subHeadingPrimary colorPrimary highlight allCaps">
+      <a href="/personal/professional" className="subHeadingPrimary colorPrimary highlight allCaps">
         {data.title}
       </a>
       <ReactMarkdown className="projectDesc textColor companyDate" children={data.content} />
