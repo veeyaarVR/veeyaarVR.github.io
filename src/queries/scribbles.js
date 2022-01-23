@@ -2,7 +2,7 @@ import gql from "graphql-tag";
 
 const SCRIBBLES_QUERY = gql`
   query Scribble {
-    scribbles {
+    scribbles(sort: "date:desc") {
       slug
       title
       date
