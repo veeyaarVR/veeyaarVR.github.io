@@ -1,3 +1,8 @@
+import PROJECTS_QUERY from "../queries/projects";
+import { useQuery } from "@apollo/client";
+import ReactMarkdown from "react-markdown";
+
+
 export default function Professional() {
   return (
     <div class="headerInfo padding25 superPadding">
@@ -7,12 +12,12 @@ export default function Professional() {
       <h2 className="colorSecondary">About Me</h2>
       <p className="subHeadingPrimary colorPrimary  align-center ">
         Developing android apps for B2B and B2C clients for the past
-        <span  className="highlight colorSecondary" > 3 years </span> and developing applications using the amazing cross
+        <span className="highlight colorSecondary" > 3 years </span> and developing applications using the amazing cross
         development platform,
-        <span  className="highlight colorSecondary" > Flutter  </span>  for the past
-        <span  className="highlight colorSecondary" > 1.5 years.  </span> 
+        <span className="highlight colorSecondary" > Flutter  </span>  for the past
+        <span className="highlight colorSecondary" > 1.5 years.  </span>
         Currently based in
-        <span  className="highlight colorSecondary" > Madurai, TamilNadu  </span> 
+        <span className="highlight colorSecondary" > Madurai, TamilNadu  </span>
         and would love to discuss on coding, android apps, politics, movies or
         books over a cup of coffee ☕
       </p>
@@ -103,6 +108,66 @@ export default function Professional() {
 
       <div className="space">&nbsp;</div>
       <div className="space">&nbsp;</div>
+      <ProjectsSection />
+      <div className="space">&nbsp;</div>
+      <div className="space">&nbsp;</div>
+
+    </div>
+  );
+}
+
+function ProjectsSection() {
+  const { loading, error, data } = useQuery(PROJECTS_QUERY);
+
+  if (loading) {
+    return (
+      <div className="bookScreen superPadding blog">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
+  if (error) return `Error! ${error.message}`;
+  if (data) {
+    return (
+      <div>
+        <div className="space">&nbsp;</div>
+        <div className="space">&nbsp;</div>
+        <h2 className="colorSecondary">Projects</h2>
+        {data.projects.map((item, index) => {
+          return <ProjectComponent data={item} />
+        })}
+      </div>
+    );
+  }
+}
+
+function ProjectComponent({ data }) {
+  return (
+    <div>
+      <div className="space">&nbsp;</div>
+      <div className="space">&nbsp;</div>
+
+      <a className="subHeadingPrimary colorPrimary highlight allCaps">
+        {data.title}
+      </a>
+      <ReactMarkdown className="projectDesc textColor companyDate" children={data.content} />
+
+      <div className="flex flex-jc-start">
+        {data.techstack.map((item, index) => {
+          return <TagComponent data={item} />
+        })}
+      </div>
+    </div>
+  );
+}
+
+function TagComponent({ data }) {
+  return (
+    <div
+      href="/personal/scribbles"
+      className="tags tagText colorSecondary"
+    >
+      {data.tagname}
     </div>
   );
 }

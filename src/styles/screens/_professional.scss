@@ -100,3 +100,12 @@ ul {
     }
   }
 }
+
+.tags {
+  background-color: $colorAccent;
+  border: 1px solid $colorSecondary;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  margin-right: 5px;
+  margin-top: 5px;
+}

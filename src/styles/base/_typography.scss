@@ -36,6 +36,17 @@
   text-decoration: none;
 }
 
+.tagText {
+  line-height: 1;
+  font-family: "Petrona SemiBold", sans-serif;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.underLine{
+  text-decoration: underline;
+}
+
 .subHeadingSecondary {
   font-family: "FiraCode", sans-serif;
   font-size: 1.3em;
@@ -63,6 +74,23 @@
 
   @include tablet {
     font-size: 1.1em;
+  }
+
+  &-align-center {
+    text-align: center;
+  }
+}
+
+.projectDesc {
+  font-family: "Petrona SemiBold", sans-serif;
+  font-size: 1.1em;
+  
+  @include phone {
+    font-size: 0.9em;
+  }
+
+  @include tablet {
+    font-size: 1em;
   }
 
   &-align-center {
@@ -110,6 +138,10 @@
 
 .colorAccent {
   color: $colorAccent;
+}
+
+.textColor {
+  color: $textColor;
 }
 
 .colorBackground {
