@@ -16,6 +16,7 @@ export default function Book() {
   if (loading) {
     return (
       <div className="bookScreen superPadding blog">
+        <h5 className="colorSecondary">fetching content. please wait</h5>
         <div className="spinner"></div>
       </div>
     );

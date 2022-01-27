@@ -8,6 +8,7 @@ export default function Wishlist() {
   if (loading) {
     return (
       <div className="bookScreen superPadding blog">
+        <h5 className="colorSecondary">fetching wishlist. please wait</h5>
         <div className="spinner"></div>
       </div>
     );
@@ -18,16 +19,15 @@ export default function Wishlist() {
     return (
       <div className="bookScreen superPadding fullScreen">
         <div className="colorPrimary paddingVertical  homeLink">
-        <div className="space"></div>
-        <p>
-          <a href="/">VIGNESH MARIMUTHU </a> /
-          <a href="/personal"> PERSONAL </a> / 
-        </p>
-        <div className="bottomLine"> </div>
-        <div className="space"></div>
-        <div className="space"></div>
-
-      </div>
+          <div className="space"></div>
+          <p>
+            <a href="/">VIGNESH MARIMUTHU </a> /
+            <a href="/personal"> PERSONAL </a> /
+          </p>
+          <div className="bottomLine"> </div>
+          <div className="space"></div>
+          <div className="space"></div>
+        </div>
         <div className="content paddingVertical ">
           <ReactMarkdown children={data.wishlist.content} />
         </div>
