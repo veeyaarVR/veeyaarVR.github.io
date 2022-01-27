@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1bccc934.chunk.css",
-    "main.js": "/static/js/main.d2e94602.chunk.js",
-    "main.js.map": "/static/js/main.d2e94602.chunk.js.map",
+    "main.css": "/static/css/main.54d0f826.chunk.css",
+    "main.js": "/static/js/main.cc01e8be.chunk.js",
+    "main.js.map": "/static/js/main.cc01e8be.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.157959c9.js",
     "runtime-main.js.map": "/static/js/runtime-main.157959c9.js.map",
     "static/js/2.2b96f0ca.chunk.js": "/static/js/2.2b96f0ca.chunk.js",
     "static/js/2.2b96f0ca.chunk.js.map": "/static/js/2.2b96f0ca.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.1bccc934.chunk.css.map": "/static/css/main.1bccc934.chunk.css.map",
+    "static/css/main.54d0f826.chunk.css.map": "/static/css/main.54d0f826.chunk.css.map",
     "static/js/2.2b96f0ca.chunk.js.LICENSE.txt": "/static/js/2.2b96f0ca.chunk.js.LICENSE.txt",
     "static/media/styles.scss": "/static/media/Petrona-SemiBold.05da2459.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.157959c9.js",
     "static/js/2.2b96f0ca.chunk.js",
-    "static/css/main.1bccc934.chunk.css",
-    "static/js/main.d2e94602.chunk.js"
+    "static/css/main.54d0f826.chunk.css",
+    "static/js/main.cc01e8be.chunk.js"
   ]
 }

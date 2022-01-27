@@ -46,7 +46,7 @@ export default function ScribbleContent() {
                         </h1>
                     </div>
 
-                    <div className="content padding25">
+                    <div className="scribbleContent content padding25">
                         <ReactMarkdown children={data.scribbles[0].content} />
                     </div>
                 </div>
