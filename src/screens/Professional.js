@@ -22,6 +22,13 @@ export default function Professional() {
         and would love to discuss on coding, android apps, politics, movies or
         books over a cup of coffee ☕
       </p>
+      <a
+          href="mailto: vigneshmarimuthu2302@gmail.com"
+          className="personal-link buttonText colorSecondary"
+        >
+          Contact →
+        </a>
+      <div className="space">&nbsp;</div>
       <div className="space">&nbsp;</div>
       <div className="space">&nbsp;</div>
       <h2 className="colorSecondary">Skills and Tech Stack</h2>
