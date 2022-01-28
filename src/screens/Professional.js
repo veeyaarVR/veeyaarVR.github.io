@@ -13,21 +13,21 @@ export default function Professional() {
       <h2 className="colorSecondary">About Me</h2>
       <p className="subHeadingPrimary colorPrimary  align-center ">
         Developing android apps for B2B and B2C clients for the past
-        <span className="highlight colorSecondary"> 3 years </span> and
+        <span className="highlight colorSecondary"> 3.5 years </span> and
         developing applications using the amazing cross development platform,
         <span className="highlight colorSecondary"> Flutter </span> for the past
-        <span className="highlight colorSecondary"> 1.5 years. </span>
+        <span className="highlight colorSecondary"> 2 years. </span>
         Currently based in
         <span className="highlight colorSecondary"> Madurai, TamilNadu </span>
         and would love to discuss on coding, android apps, politics, movies or
         books over a cup of coffee ☕
       </p>
       <a
-          href="mailto: vigneshmarimuthu2302@gmail.com"
-          className="personal-link buttonText colorSecondary"
-        >
-          Contact →
-        </a>
+        href="mailto: vigneshmarimuthu2302@gmail.com"
+        className="personal-link buttonText colorSecondary"
+      >
+        Contact →
+      </a>
       <div className="space">&nbsp;</div>
       <div className="space">&nbsp;</div>
       <div className="space">&nbsp;</div>
@@ -141,9 +141,13 @@ function ProjectsSection() {
         <div className="space">&nbsp;</div>
         <div className="space">&nbsp;</div>
         <h2 className="colorSecondary">Projects</h2>
-        {data.projects.map((item, index) => {
-          return <ProjectComponent data={item} />;
-        })}
+        <div className="projectsContainer">
+          <main className="projectsGrid">
+            {data.projects.map((item, index) => {
+              return <ProjectComponent data={item} />;
+            })}
+          </main>
+        </div>
       </div>
     );
   }
@@ -151,17 +155,19 @@ function ProjectsSection() {
 
 function ProjectComponent({ data }) {
   return (
-    <div>
+    <div className="projectItem">
       <div className="space">&nbsp;</div>
       <div className="space">&nbsp;</div>
 
-      <div className="subHeadingPrimary colorPrimary allCaps">{data.title}</div>
+      <div className="subHeadingPrimary colorPrimary allCaps highlight">
+        {data.title}
+      </div>
       <ReactMarkdown
         className="projectDesc textColor companyDate"
         children={data.content}
       />
 
-      <div className="flex flex-jc-start">
+      <div className="tagContainer flex flex-jc-start">
         {data.techstack.map((item, index) => {
           return <TagComponent data={item} />;
         })}

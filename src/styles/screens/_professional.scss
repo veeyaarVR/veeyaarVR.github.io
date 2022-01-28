@@ -109,3 +109,39 @@ ul {
   margin-right: 5px;
   margin-top: 5px;
 }
+
+.tagContainer {
+  position: relative;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+
+.projectsContainer {
+  max-width: 100%;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  align-items: flex-start;
+
+  @include phone {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+.projectItem {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  text-align: justify;
+}
