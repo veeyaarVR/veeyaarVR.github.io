@@ -33,7 +33,6 @@ export default function Book() {
           <meta name="title" content={data.articles[0].title} />
           <meta property="og:type" content="article" />
           <meta name="keywords" content="Book notes, Vignesh Marimuthu" />
-          //og tags
           <meta property="og:title" content={data.articles[0].title} />
           <meta
             property="og:description"
