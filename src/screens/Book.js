@@ -27,16 +27,26 @@ export default function Book() {
     return (
       <div>
         <Helmet>
-          <title>{data.articles[0].title} | Book Notes | Vignesh Marimuthu</title>
-          <meta property="og:url" content="https://help.twitter.com/en/using-twitter/add-twitter-share-button" />
+          <title>
+            {data.articles[0].title} | Book Notes | Vignesh Marimuthu
+          </title>
+          <meta name="title" content={data.articles[0].title} />
           <meta property="og:type" content="article" />
           <meta name="keywords" content="Book notes, Vignesh Marimuthu" />
-          <meta name="twitter:title" content={data.articles[0].title} />
-          <meta name="twitter:description" content="" />
-          <meta name="twitter:image" content={data.articles[0].image.url} />
-          <meta name="twitter:widgets:new-embed-design" content="on" />
-          <meta name="twitter:widgets:csp" content="on"></meta>
-          <meta name="twitter:card" content="summary"></meta>
+          //og tags
+          <meta property="og:title" content={data.articles[0].title} />
+          <meta
+            property="og:description"
+            content="Personal Portfolio website of an Average Engineer"
+          />
+          <meta property="og:image" content={data.articles[0].image.url} />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:title" content={data.articles[0].title} />
+          <meta
+            property="twitter:description"
+            content="Personal Portfolio website of an Average Engineer"
+          />
+          <meta property="twitter:image" content={data.articles[0].image.url} />
         </Helmet>
         <div className="bookScreen superPadding fullScreen">
           <div className="colorPrimary paddingVertical  homeLink">

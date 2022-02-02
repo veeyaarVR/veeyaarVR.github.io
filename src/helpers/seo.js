@@ -1,16 +1,46 @@
-export function seo(data = {}) {
-  data.title =
-    data.title || "Vignesh Marimuthu | Portfolio, Book Notes & Stuffs";
-  data.metaDescription =
-    data.metaDescription || "personal Portfolio website of an Average Engineer";
+export function seo({ title, metaDescription }) {
+  var newTitle = title || "Vignesh Marimuthu | Portfolio, Book Notes & Stuffs";
+  var newDesc =
+    metaDescription || "personal Portfolio website of an Average Engineer";
+  document.title = newTitle;
+  document
+    .querySelector('meta[name="description"]')
+    .setAttribute("content", newDesc);
+  document
+    .querySelector('meta[name="title"]')
+    .setAttribute("content", newTitle);
 
-  document.title = data.title;
+  //og tags
   document
-    .querySelector('meta[name="description"]')
-    .setAttribute("content", data.metaDescription);
+    .querySelector('meta[property="og:type"]')
+    .setAttribute("content", "website");
   document
-    .querySelector('meta[name="description"]')
-    .setAttribute("content", data.metaDescription);
-  document.querySelector('meta[name="twitter:title"]').setAttribute("content",data.title);
-  document.querySelector('meta[name="twitter:description"]').setAttribute('content',data.metaDescription);
+    .querySelector('meta[property="og:title"]')
+    .setAttribute("content", newTitle);
+  document
+    .querySelector('meta[property="og:description"]')
+    .setAttribute("content", newDesc);
+  document
+    .querySelector('meta[property="og:image"]')
+    .setAttribute(
+      "content",
+      "https://beingaverageengineer.com/images/founder1.jpg"
+    );
+
+  //twitter tags
+  document
+    .querySelector('meta[property="twitter:card"]')
+    .setAttribute("content", "summary_large_image");
+  document
+    .querySelector('meta[property="twitter:title"]')
+    .setAttribute("content", newTitle);
+  document
+    .querySelector('meta[property="twitter:description"]')
+    .setAttribute("content", newDesc);
+  document
+    .querySelector('meta[property="twitter:image"]')
+    .setAttribute(
+      "content",
+      "https://beingaverageengineer.com/images/founder1.jpg"
+    );
 }
