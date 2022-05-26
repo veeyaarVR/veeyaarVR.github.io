@@ -91,7 +91,7 @@ function IntroSection() {
           className="superTitlePrimary colorPrimary"
           data-text="Vignesh Marimuthu"
         >
-          He/Him | Minimalist | Stoic | Atheist | Human
+          He/Him. Minimalist. Stoic. Atheist. Human
         </h1>
         <div className="space"> </div>
         <a

@@ -43,7 +43,7 @@ a {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 250px 1fr;
-  background-color: white;
+  background-color: $highlightColor;
   border-radius: 10px 10px 0 0;
 
   @include desktop {
@@ -81,6 +81,7 @@ a {
     @include desktop {
       grid-row: 2/3;
     }
+
   }
 
   &__author {
