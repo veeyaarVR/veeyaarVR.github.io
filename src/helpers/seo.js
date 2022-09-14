@@ -10,37 +10,42 @@ export function seo({ title, metaDescription }) {
     .querySelector('meta[name="title"]')
     .setAttribute("content", newTitle);
 
-  //og tags
-  document
-    .querySelector('meta[property="og:type"]')
-    .setAttribute("content", "website");
-  document
-    .querySelector('meta[property="og:title"]')
-    .setAttribute("content", newTitle);
-  document
-    .querySelector('meta[property="og:description"]')
-    .setAttribute("content", newDesc);
-  document
-    .querySelector('meta[property="og:image"]')
-    .setAttribute(
-      "content",
-      "https://beingaverageengineer.com/images/founder1.jpg"
-    );
+  // added try catch because the page not loading when pressed back in browser
+  try {
+    //og tags
+    document
+      .querySelector('meta[property="og:type"]')
+      .setAttribute("content", "website");
+    document
+      .querySelector('meta[property="og:title"]')
+      .setAttribute("content", newTitle);
+    document
+      .querySelector('meta[property="og:description"]')
+      .setAttribute("content", newDesc);
+    document
+      .querySelector('meta[property="og:image"]')
+      .setAttribute(
+        "content",
+        "https://beingaverageengineer.com/images/founder1.jpg"
+      );
 
-  //twitter tags
-  document
-    .querySelector('meta[property="twitter:card"]')
-    .setAttribute("content", "summary_large_image");
-  document
-    .querySelector('meta[property="twitter:title"]')
-    .setAttribute("content", newTitle);
-  document
-    .querySelector('meta[property="twitter:description"]')
-    .setAttribute("content", newDesc);
-  document
-    .querySelector('meta[property="twitter:image"]')
-    .setAttribute(
-      "content",
-      "https://beingaverageengineer.com/images/founder1.jpg"
-    );
+    //twitter tags
+    document
+      .querySelector('meta[property="twitter:card"]')
+      .setAttribute("content", "summary_large_image");
+    document
+      .querySelector('meta[property="twitter:title"]')
+      .setAttribute("content", newTitle);
+    document
+      .querySelector('meta[property="twitter:description"]')
+      .setAttribute("content", newDesc);
+    document
+      .querySelector('meta[property="twitter:image"]')
+      .setAttribute(
+        "content",
+        "https://beingaverageengineer.com/images/founder1.jpg"
+      );
+  } catch (error) {
+    console.log("error: " + error);
+  }
 }
