@@ -1,57 +1,29 @@
 {
-  "name": "vigneshmarimuthu-portfolio",
-  "version": "0.1.0",
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
   "dependencies": {
-    "@apollo/client": "^3.4.5",
+    "@astrojs/mdx": "^0.14.0",
+    "@astrojs/react": "^1.2.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.3",
-    "@testing-library/user-event": "^12.6.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "graphql": "^15.5.1",
-    "history": "^5.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-ga": "^3.3.0",
-    "react-helmet": "^6.1.0",
-    "react-markdown": "^7.0.0",
-    "react-moment": "^1.1.1",
-    "react-particles-js": "^3.4.1",
-    "react-responsive": "^8.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
-    "react-use-audio-player": "^1.2.4",
-    "sass": "^1.32.6",
-    "serve": "^12.0.0",
-    "web-vitals": "^0.2.4"
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "astro": "^1.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-particles": "^2.7.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prod": "npm run-script build && serve build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "sass": "^1.57.1"
   }
 }

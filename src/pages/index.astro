@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/styles.scss";
+import ParticleBackground from "../components/Particle.jsx";
+---
+
+<Layout title="Vignesh Marimuthu">
+	<main>
+		<div>
+			<ParticleBackground />
+			<div class="homeContainer">
+				<h1 class="smallHeadingPrimary colorSecondary">
+					👋 Hello there, my name is
+				</h1>
+				<h1
+					class="superTitlePrimary colorPrimary"
+					data-text="Vignesh Marimuthu"
+				>
+					Vignesh Marimuthu
+				</h1>
+
+				<div class="flex flex-jc-start">
+					<a
+						href="/personal"
+						class="personal-link buttonText colorSecondary"
+					>
+						Personal →
+					</a>
+					<a
+						href="/professional"
+						class="personal-link buttonText colorSecondary"
+					>
+						Professional →
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>

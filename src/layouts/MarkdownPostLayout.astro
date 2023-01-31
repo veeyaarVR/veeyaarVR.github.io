@@ -1,0 +1,42 @@
+---
+import "../../../scribblingcoder/src/styles/styles.scss";
+const { frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+	</head>
+	<body>
+        <main>
+            <div class="bookScreen superPadding fullScreen">
+                <div class="colorPrimary paddingVertical homeLink">
+                    <div class="space"></div>
+                    <div class="space"></div>
+                    <p>
+                        <a href="/">VIGNESH MARIMUTHU</a> / <a href="/personal">PERSONAL</a> / <a href="/personal/scribbles"> SCRIBBLES</a> /
+                    </p>
+                    <div class="bottomLine"></div>
+                </div>
+                <div class="padding25 bottomLine">
+                    <h1
+                        class="superTitlePrimary colorSecondary"
+                        data-text="Vignesh Marimuthu"
+                    >
+                        {frontmatter.title}
+                    </h1>
+                </div>
+
+                <div class="scribbleContent content padding25">
+                    <slot />
+                </div>
+            </div>
+        </main>
+	</body>
+</html>
+

@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/styles.scss";
+import ShortStory from '../components/personalComps/ShortStory.astro';
+import IntroSection from '../components/personalComps/IntroSection.astro';
+import LikesSection from '../components/personalComps/LikesSection.astro';
+import WishListInfo  from '../components/personalComps/WishListInfo.astro';
+---
+
+<Layout title="Personal | Vignesh Marimuthu">
+	<main>
+    <div class="personal">
+      <div class="colorPrimary padding25  homeLink centerHorizontal">
+        <a href="/">⌂ VIGNESH MARIMUTHU</a>
+        <div class="bottomLine"> </div>
+      </div>
+      <IntroSection />
+      <ShortStory />
+      <LikesSection />
+      <WishListInfo />
+    </div>
+	</main>
+</Layout>

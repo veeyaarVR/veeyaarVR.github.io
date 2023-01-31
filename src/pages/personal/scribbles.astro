@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/styles.scss";
+import type { Frontmatter } from "../../types";
+const allScribbles = await Astro.glob<Frontmatter>('../../../src/pages/personal/scribbles/*.mdx');
+---
+
+<Layout title="Scribbles | Vignesh Marimuthu">
+    <main>
+        <div class="blog superPadding fullScreen">
+            <div class="colorPrimary paddingVertical homeLink">
+                <div class="space"></div>
+                <div class="space"></div>
+                <p>
+                    <a href="/">VIGNESH MARIMUTHU</a> / <a href="/personal">PERSONAL</a>{" "}/
+                </p>
+                <div class="bottomLine"></div>
+            </div>
+            <div>
+                <div class="space"></div>
+                <div class="superTitlePrimary colorSecondary">Scribbles</div>
+                <div class="subHeadingSecondary colorPrimary">
+                    You can find my two cents, opinions, small stories, poems, and whatever
+                    I want to say here. I call these as scribbles.
+                </div>
+                <div class="space"></div>
+                <div class="space"></div>
+                <div class="bottomLine"></div>
+                <div class="space"></div>
+            </div>
+
+            <div>
+                {allScribbles.map((scribble) => (
+                  <div
+                    class="scribblesList subHeadingSecondary textColor"
+                  >
+                    <a
+                      href={`/personal/scribbles/${scribble.frontmatter.slug}` }
+                    >
+                      <div class="scribbleItem">
+                        {scribble.frontmatter.title}
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+        </div>
+    </main>
+</Layout>

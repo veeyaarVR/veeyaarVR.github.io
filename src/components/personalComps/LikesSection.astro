@@ -1,0 +1,59 @@
+---
+const interestList = [
+  "Minimalism",
+  "Atheism",
+  "Periyaar",
+  "Ambedkar",
+  "Nolan Movies",
+  "U1 Songs",
+  "Solo Bike Rides",
+  "F.R.I.E.N.D.S",
+  "Game of Thrones",
+  "Mech KB",
+  "Coding",
+  "Harmonica",
+  "Sci-Fi Movies",
+  "Vijay Antony",
+  "Torantino",
+  "Long Car Rides",
+  "Ilayaraja",
+  "Paulo Coelho",
+  "Communism",
+  "Cs:GO",
+  "Ginger Tea",
+  "Slow living",
+  "Naruto",
+  "Beach",
+  "Train Travel",
+  "Bomb Squad",
+  "Desk Setup",
+  "Solid Tee",
+  "Santhosh Narayanan",
+  "Pradeep Kumar",
+  "MKBHD",
+  "Mysskin",
+  "Time Travel",
+];
+---
+
+
+<div class="fullScreen superPaddingVertical flex flex-ai-c flex-jc-c superPadding">
+    <div>
+      <div class="subHeadingPrimary subHeadingSecondary-align-center padding25 colorPrimary">
+        If you could vibe to a lot of the below, we can be great friends ✌️
+      </div>
+      <div class="likesContainer">
+        {interestList.map((item, index) => {
+          let url = "https://www.google.com/search?q=" + item;
+          return (
+            <a
+              href={url}
+              class="interests buttonText colorSecondary"
+            >
+              {item}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </div>
