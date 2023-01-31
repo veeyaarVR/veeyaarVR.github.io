@@ -2,10 +2,7 @@ name: Deploy Astro site to Pages
 
 on:
   push:
-    branches: 
-        - astro-blog-migration
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: ["astro-blog-migration"]
   workflow_dispatch:
 
 env:
