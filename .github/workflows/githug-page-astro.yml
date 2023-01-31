@@ -4,7 +4,7 @@ name: Build and Deploy Astro
 on:
   push:
     branches:
-      -  astro-blog-migration
+      - astro-blog-migration
       
 env:
   CI: false
