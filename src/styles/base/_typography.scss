@@ -1,0 +1,172 @@
+.smallHeadingSecondary {
+  font-family: "ShareTechMono Light", sans-serif;
+  font-size: 1em;
+
+  @include phone {
+    font-size: 1em;
+  }
+
+  @include tablet {
+    font-size: 1.1em;
+  }
+}
+
+.smallHeadingPrimary {
+  font-family: "SpaceMono Light", sans-serif;
+  font-size: 1em;
+
+  @include phone {
+    font-size: 1em;
+  }
+
+  @include tablet {
+    font-size: 1.1em;
+  }
+}
+
+.tamilFont {
+  font-family: "Ponni Regular", sans-serif;
+  font-size: 1em;
+
+  @include phone {
+    font-size: 1em;
+  }
+
+  @include tablet {
+    font-size: 1.1em;
+  }
+}
+
+.superTitlePrimary {
+  font-family: "SpaceMono SemiBold", sans-serif;
+  font-size: clamp(35px, 3vw, 75px);
+}
+
+.buttonText {
+  line-height: 1;
+  font-family: "SpaceMono SemiBold", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.tagText {
+  line-height: 1;
+  font-family: "SpaceMono SemiBold", sans-serif;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.underLine{
+  text-decoration: underline;
+}
+
+.subHeadingSecondary {
+  font-family: "ShareTechMono", sans-serif;
+  font-size: 1.3em;
+
+  @include phone {
+    font-size: 1em;
+  }
+
+  @include tablet {
+    font-size: 1.1em;
+  }
+
+  &-align-center {
+    text-align: center;
+  }
+}
+
+.subHeadingPrimary {
+  font-family: "SpaceMono SemiBold", sans-serif;
+  font-size: 1.3em;
+  
+  @include phone {
+    font-size: 1em;
+  }
+
+  @include tablet {
+    font-size: 1.1em;
+  }
+
+  &-align-center {
+    text-align: center;
+  }
+}
+
+.projectDesc {
+  font-family: "SpaceMono SemiBold", sans-serif;
+  font-size: 1.1em;
+  
+  @include phone {
+    font-size: 0.9em;
+  }
+
+  @include tablet {
+    font-size: 1em;
+  }
+
+  &-align-center {
+    text-align: center;
+  }
+}
+
+
+
+.titlePrimary {
+  font-family: "SpaceMono Bold", sans-serif;
+  font-size: 1.5em;
+}
+
+.bolderSecondary {
+  font-family: "ShareTechMono", sans-serif;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+
+.categoryText {
+  line-height: 1;
+  font-family: "ShareTechMono", sans-serif;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.dateText {
+  line-height: 1;
+  font-family: "ShareTechMono", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+
+
+.colorPrimary {
+  color: $colorPrimary;
+}
+
+.colorSecondary {
+  color: $colorSecondary;
+}
+
+.colorAccent {
+  color: $colorAccent;
+}
+
+.textColor {
+  color: $textColor;
+}
+
+.colorBackground {
+  color: $colorAccent;
+}
+
+
+.highlight {
+  background: $highlightColor;
+}
+
+.allCaps{
+  text-transform: uppercase;
+}
+

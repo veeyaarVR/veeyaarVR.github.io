@@ -1,0 +1,31 @@
+.scribblesList {
+  padding-top: 10px;
+}
+
+.scribbleItem {
+  color: $textColor;
+  &:hover {
+    color: $colorSecondary;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.scribbleContent {
+  text-align: justify;
+  
+  img {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    max-width: 60%;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    @include phone {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.padding25 {
+  padding: 25px;
+
+  @include phone {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.bottomPadding {
+  padding-bottom: 25px;
+}
+
+.superPadding {
+  padding-left: 15%;
+  padding-right: 15%;
+
+  @include phone {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  @include tablet {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+.superPaddingVertical {
+  padding-top: 10%;
+  padding-bottom: 10%;
+
+  @include phone {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  @include tablet {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+}
+
+.space {
+  height: 15px;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
+
+  @include phone {
+    flex-wrap: wrap;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-se {
+    justify-content: space-evenly;
+  }
+
+  &-jc-start {
+    justify-content: flex-start;
+    @include phone {
+      justify-content: center;
+    }
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+    @include phone {
+      text-align: center;
+    }
+  }
+
+  &-jc-sa {
+    justify-content: space-around;
+  }
+}
+
+.fullScreen {
+  min-height: 100vh;
+}
+
+.socialIcon {
+  size: 2x;
+  color: $colorPrimary;
+  margin: 10px;
+  &:hover {
+    color: $colorSecondary;
+  }
+}
+
+.textAlignCenter {
+  text-align: start;
+
+  @include phone {
+    text-align: center;
+  }
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: $colorPrimary;
+  border-radius: 100%;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}

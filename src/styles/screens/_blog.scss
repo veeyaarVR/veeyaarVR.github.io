@@ -1,0 +1,94 @@
+.blog {
+  height: fit-content;
+}
+
+a {
+  text-decoration: none;
+
+  
+}
+
+.books {
+  display: grid;
+  gap: 1rem;
+  margin: 5px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include large {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include phone {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+
+}
+
+.categoriesContainer {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.book {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 250px 1fr;
+  background-color: $highlightColor;
+  border-radius: 10px 10px 0 0;
+
+  @include desktop {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 300px 1fr;
+  }
+
+  &__image {
+    grid-row: 1/2;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    background: no-repeat center center / cover;
+
+    @include desktop {
+      grid-row: 1/2;
+      border-radius: 10px 10px 0px 0px;
+      background: no-repeat center center / cover;
+    }
+  }
+
+  &__title {
+    grid-row: 1/2;
+    @include desktop {
+      grid-row: 1/2;
+      border-radius: 10px 10px 0px 0px;
+    }
+  }
+
+  &__content {
+    grid-row: 2 / 3;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0;
+
+    @include desktop {
+      grid-row: 2/3;
+    }
+
+  }
+
+  &__author {
+    grid-row: 3/4;
+
+    @include desktop {
+      grid-row: 3/4;
+    }
+  }
+}

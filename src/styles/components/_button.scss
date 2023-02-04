@@ -1,0 +1,80 @@
+.personal-link {
+  background-color: $colorAccent;
+  border: 1px solid $colorSecondary;
+  border-radius: 5px;
+  page-break-inside: avoid;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 30px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover {
+    background-color: $colorBackground;
+    text-decoration: none;
+  }
+
+  @media (max-width: 480px) {
+    margin-right: 10px;
+  }
+}
+
+.interests {
+  background-color: $colorAccent;
+  border: 1px solid $colorSecondary;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  margin: 5px;
+  margin-top: 10px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover {
+    outline: none;
+    background-color: $colorBackground;
+    text-decoration: none;
+  }
+
+  @include phone {
+    margin-right: 0px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.category-link {
+  background-color: $colorAccent;
+  border: 1px solid $colorSecondary;
+  border-radius: 5px;
+  page-break-inside: avoid;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover {
+    background-color: $colorBackground;
+    text-decoration: none;
+  }
+
+  @media (max-width: 480px) {
+    margin-right: 10px;
+  }
+}
+
+.category-selected {
+  background-color: $colorBackground;
+  text-decoration: none;
+  border: 1px solid $colorSecondary;
+  border-radius: 5px;
+  page-break-inside: avoid;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  @media (max-width: 480px) {
+    margin-right: 10px;
+  }
+}

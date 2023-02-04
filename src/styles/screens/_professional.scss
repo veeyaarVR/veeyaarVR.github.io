@@ -1,0 +1,147 @@
+body {
+  background: $colorBackground;
+}
+
+.headerInfo {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  padding: 6vw 3vw;
+  min-height: 200px;
+  max-height: 340px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.space {
+  height: 15px;
+  width: 100%;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.skill {
+  margin: 20px 10% 20px 0px;
+
+  @include phone {
+    margin: 20px 10% 10px 0px;
+  }
+}
+.companyDetails {
+  padding-right: 30%;
+  width: 80%;
+  margin-top: 10px;
+}
+
+.companyInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+
+  @include phone {
+    margin-bottom: 10px;
+  }
+}
+
+.companyDate {
+  margin-top: 0px;
+
+  @include phone {
+    margin-top: 5px;
+  }
+}
+
+.companyName {
+  margin: 0;
+}
+
+.content {
+  font-family: "SpaceMono Regular";
+  font-size: 1.25rem;
+  color: $colorPrimary;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $colorSecondary;
+  }
+}
+
+li {
+  display: list-item;
+  text-align: left;
+}
+
+ul {
+  list-style-type: disc;
+  list-style: none;
+  padding: 0;
+}
+
+.homeLink {
+  a {
+    text-decoration: none;
+    color: $colorPrimary;
+
+    &:hover {
+      color: $colorSecondary;
+    }
+  }
+}
+
+.tags {
+  background-color: $colorAccent;
+  border: 1px solid $colorSecondary;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.tagContainer {
+  position: relative;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+
+.projectsContainer {
+  max-width: 100%;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  align-items: flex-start;
+
+  @include phone {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+.projectItem {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  text-align: justify;
+}
