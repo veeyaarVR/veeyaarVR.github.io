@@ -73,6 +73,7 @@ export default function Personal() {
           content="This is my personal blog which tells a lot about who I am and my opinions, that nobody asked for"
           key="desc"
         />
+        <meta name="image" content="https://vigneshmarimuthu.com/logo512.png" />
         <meta property="og:image" content="https://vigneshmarimuthu.com/logo512.png"></meta>
 
       </Head>
