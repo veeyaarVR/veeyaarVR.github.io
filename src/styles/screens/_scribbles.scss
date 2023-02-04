@@ -4,6 +4,7 @@
 
 .scribbleItem {
   color: $textColor;
+  font-size: 1.15rem;
   &:hover {
     color: $colorSecondary;
     text-decoration: underline;

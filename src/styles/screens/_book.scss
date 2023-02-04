@@ -8,8 +8,8 @@ a {
 }
 
 .content {
-  font-family: "SpaceMono Regular";
-  font-size: 1.25rem;
+  font-family: "Epilogue Regular";
+  font-size: 1.15em;
   color: $colorPrimary;
 
 
@@ -23,6 +23,8 @@ a {
 
   p {
     color: $textColor;
+    line-height: 1.5em;
+    text-align: left;
   }
 
   li {
@@ -36,7 +38,7 @@ a {
 
 .contentTamil {
   font-family: "Ponni Regular";
-  font-size: 1rem;
+  font-size: 1em;
   color: $colorPrimary;
 
 

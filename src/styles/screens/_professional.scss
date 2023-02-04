@@ -64,21 +64,6 @@ body {
   margin: 0;
 }
 
-.content {
-  font-family: "SpaceMono Regular";
-  font-size: 1.25rem;
-  color: $colorPrimary;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $colorSecondary;
-  }
-}
-
 li {
   display: list-item;
   text-align: left;
