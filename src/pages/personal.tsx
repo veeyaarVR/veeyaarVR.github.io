@@ -56,7 +56,7 @@ let interestList = [
       , where I post and write tech tutorials. (Yeah! Nerd.)<br></br>
       <br></br>Selectively social, constant learner, cis-het, creative at night, motivated during shower,
       occasionally good lookin and a humble human being. Belongs to House Targaryen.<br></br>
-      <br></br>I am that guy, who cuts your call and texts you back, <i>I`&apos;`ll call you
+      <br></br>I am that guy, who cuts your call and texts you back, <i>I&apos;ll call you
       later</i>, but never does.
     </>
   );
@@ -156,7 +156,7 @@ let interestList = [
       <div className="flex flex-ai-c flex-jc-c superPadding">
         <div>
           <div className="subHeadingSecondary colorSecondary subHeadingSecondary-align-center padding25">
-            Connect with me even if you don`&apos;`t vibe with any of the above 🙌
+            Connect with me even if you don&apos;t vibe with any of the above 🙌
             <br></br> I desperately need some friends.
           </div>
           <div className="flex flex-ai-c flex-jc-c">
