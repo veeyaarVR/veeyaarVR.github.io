@@ -28,16 +28,24 @@ export default function Scribble({ frontmatter, mdxSource }) {
                     </p>
                     <div className="bottomLine"> </div>
                 </div>
-                <div className="padding25 bottomLine">
+
+                <div className="bottomLine">
+                    <div className="space"></div>
                     <h1
                         className="superTitlePrimary colorSecondary "
                         data-text="Vignesh Marimuthu"
                     >{frontmatter.title}
                     </h1>
+                    <div className="flex">
+                        <p>
+                            Vignesh Marimuthu |  <span className="highlight colorSecondary">{frontmatter.date}</span>
+                        </p>
+                    </div>
+                    <div className="space"></div>
                 </div>
 
                 <ScribbleContent frontmatter={frontmatter} mdxSource={mdxSource} />
-{/* 
+                {/* 
                 <div className="scribbleContent contentTamil padding25">
                     <MDXRemote {...mdxSource}></MDXRemote>
                 </div> */}
@@ -49,15 +57,22 @@ export default function Scribble({ frontmatter, mdxSource }) {
 export function ScribbleContent({ frontmatter, mdxSource }) {
     if (frontmatter.language == 'tamil') {
         return (
-            <div className="scribbleContent contentTamil padding25">
-                
+            <div className="scribbleContent contentTamil ">
+
+                <div className="space"></div>
 
                 <MDXRemote {...mdxSource}></MDXRemote>
+
+                <div className="space"></div>
+
             </div>)
     } else {
         return (
-            <div className="scribbleContent content padding25">
+            <div className="scribbleContent content">
+                <div className="space"></div>
+
                 <MDXRemote {...mdxSource}></MDXRemote>
+                <div className="space"></div>
             </div>)
     }
 }

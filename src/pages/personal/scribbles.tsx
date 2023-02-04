@@ -50,7 +50,7 @@ function ScribbleList({ scribbles }) {
                         key={post.slug}
                     >
                         <div className="scribbleItem">
-                            {post.frontmatter.title} | {post.frontmatter.date}
+                        • {post.frontmatter.title} | {post.frontmatter.date}
                         </div>
                     </Link>
                 </div>
