@@ -1,6 +1,7 @@
 import { getAllPaths, getContentBySlug } from "@/utils/mdx";
 import { language } from "gray-matter";
 import { MDXRemote } from "next-mdx-remote";
+import Head from "next/head";
 import Link from "next/link";
 
 export async function getStaticPaths() {
@@ -16,6 +17,16 @@ export async function getStaticProps({ params: { slug } }) {
 export default function Scribble({ frontmatter, mdxSource }) {
     return (
         <div>
+            <Head>
+                <title>
+                    {frontmatter.title} | Vignesh Marimuthu
+                </title>
+                <meta
+                    name="description"
+                    content="This is my personal blog which tells a lot about who I am and my opinions, that nobody asked for"
+                    key="desc"
+                />
+            </Head>
 
             <div className="bookScreen superPadding fullScreen">
                 <div className="colorPrimary paddingVertical  homeLink">

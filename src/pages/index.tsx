@@ -4,11 +4,22 @@ import {
   faReddit,
   faMedium,
 } from "@fortawesome/free-brands-svg-icons";
+import Head from "next/head";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
+      <Head>
+        <title>
+          Vignesh Marimuthu | Portfolio, Scribbles & Stuff
+        </title>
+        <meta
+          name="description"
+          content="This is my personal blog which tells a lot about who I am and my opinions, that nobody asked for"
+          key="desc"
+        />
+      </Head>
       <div >
         <ParticleComponent />
         <div className="homeContainer">

@@ -1,22 +1,36 @@
 
-import { getAllScribbles , getAllScribblesByTag} from "../../utils/mdx"
+import { getAllScribbles, getAllScribblesByTag } from "../../utils/mdx"
 import Link from "next/link"
+import Head from "next/head";
 
-export default function Scribbles({ scribbles }) {    
+export default function Scribbles({ scribbles }) {
     return (
-        <div className="blog superPadding fullScreen">
-            <div className="colorPrimary paddingVertical  homeLink">
-                <div className="space"></div>
-                <div className="space"></div>
-                <p>
-                    <Link href="/"> VIGNESH MARIMUTHU </Link> /<Link href="/personal"> PERSONAL </Link>{" "}
-                    /
-                </p>
-                <div className="bottomLine"> </div>
+        <main>
+            <Head>
+                <title>
+                    Scribbles | Vignesh Marimuthu
+                </title>
+                <meta
+                    name="description"
+                    content="This is my personal blog which tells a lot about who I am and my opinions, that nobody asked for"
+                    key="desc"
+                />
+            </Head>
+
+            <div className="blog superPadding fullScreen">
+                <div className="colorPrimary paddingVertical  homeLink">
+                    <div className="space"></div>
+                    <div className="space"></div>
+                    <p>
+                        <Link href="/"> VIGNESH MARIMUTHU </Link> /<Link href="/personal"> PERSONAL </Link>{" "}
+                        /
+                    </p>
+                    <div className="bottomLine"> </div>
+                </div>
+                <HeaderSection />
+                <ScribbleList scribbles={scribbles} />
             </div>
-            <HeaderSection />
-            <ScribbleList scribbles={scribbles} />
-        </div>
+        </main>
     );
 }
 
@@ -50,7 +64,7 @@ function ScribbleList({ scribbles }) {
                         key={post.slug}
                     >
                         <div className="scribbleItem">
-                        • {post.frontmatter.title} | {post.frontmatter.date}
+                            • {post.frontmatter.title} | {post.frontmatter.date}
                         </div>
                     </Link>
                 </div>
@@ -67,7 +81,7 @@ function formatDate(date: Date) {
     // return dateTimeFormat.format(d);
 }
 
-export async function getStaticProps(){
+export async function getStaticProps() {
     const scribbles = await getAllScribbles()
     return scribbles;
 }
