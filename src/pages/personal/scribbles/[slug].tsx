@@ -1,8 +1,11 @@
 import { getAllPaths, getContentBySlug } from "@/utils/mdx";
+import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { language } from "gray-matter";
 import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
     const allPaths = await getAllPaths()
@@ -15,6 +18,11 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 export default function Scribble({ frontmatter, mdxSource }) {
+    const router = useRouter()
+    const href = router.pathname
+    const twitterShareUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(href)
+    const linkedInShareUrl = "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=" + encodeURIComponent(href)
+
     return (
         <div>
             <Head>
@@ -59,6 +67,39 @@ export default function Scribble({ frontmatter, mdxSource }) {
                 </div>
 
                 <ScribbleContent frontmatter={frontmatter} mdxSource={mdxSource} />
+                <div className="bottomLine"> </div>
+
+                <div className="flex flex-ai-c">
+                    <p>
+                        Share on
+                    </p>
+
+                    <div className="flex">
+                        <Link
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-size="large"
+                            href = {twitterShareUrl}
+                        >
+                            <FontAwesomeIcon
+                                className="socialIcon"
+                                icon={faTwitter}
+                            />
+                        </Link>
+                        <Link
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-size="large"
+                            href = {linkedInShareUrl}
+                        >
+                            <FontAwesomeIcon
+                                className="socialIcon"
+                                icon={faLinkedin}
+                            />
+                        </Link>
+                    </div>
+                </div>
+
                 {/* 
                 <div className="scribbleContent contentTamil padding25">
                     <MDXRemote {...mdxSource}></MDXRemote>
