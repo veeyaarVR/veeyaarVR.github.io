@@ -26,6 +26,21 @@
   }
 }
 
+.superPaddingArticle {
+  padding-left: 20%;
+  padding-right: 20%;
+
+  @include phone {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @include tablet {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
 .superPaddingVertical {
   padding-top: 10%;
   padding-bottom: 10%;

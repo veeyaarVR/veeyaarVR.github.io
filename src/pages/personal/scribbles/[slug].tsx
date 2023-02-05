@@ -31,7 +31,7 @@ export default function Scribble({ frontmatter, mdxSource }) {
 
             </Head>
 
-            <div className="bookScreen superPadding fullScreen">
+            <div className="bookScreen superPaddingArticle fullScreen">
                 <div className="colorPrimary paddingVertical  homeLink">
                     <div className="space"></div>
                     <div className="space"></div>
