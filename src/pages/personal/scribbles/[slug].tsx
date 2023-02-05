@@ -21,7 +21,7 @@ export async function getStaticProps({ params: { slug } }) {
 export default function Scribble({ frontmatter, mdxSource }) {
     const router = useRouter()
     const href = router.asPath
-    const url = 'https://vigneshmarimuthu.com/'
+    const url = 'https://vigneshmarimuthu.com'
     const fullUrl = url + href
     const twitterShareUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(fullUrl)
     const linkedInShareUrl = "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=" + encodeURIComponent(fullUrl)
