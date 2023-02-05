@@ -116,6 +116,14 @@
   }
 }
 
+.shareSocialIcon {
+  color: $colorSecondary;
+  margin-left: 15px;
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
 .textAlignCenter {
   text-align: start;
 
@@ -132,6 +140,14 @@
   border-radius: 100%;  
   -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
   animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+.copyLink {
+  &:hover {
+    background-color: $colorBackground;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 @-webkit-keyframes sk-scaleout {
