@@ -1,11 +1,12 @@
 import { getAllPaths, getContentBySlug } from "@/utils/mdx";
-import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faChain } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { language } from "gray-matter";
 import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { toast } from "react-toastify";
 
 export async function getStaticPaths() {
     const allPaths = await getAllPaths()
@@ -21,9 +22,9 @@ export default function Scribble({ frontmatter, mdxSource }) {
     const router = useRouter()
     const href = router.asPath
     const url = 'https://vigneshmarimuthu.com/'
-    const twitterShareUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url + href)
-    const linkedInShareUrl = "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=" + encodeURIComponent(url + href)
-
+    const fullUrl = url + href
+    const twitterShareUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(fullUrl)
+    const linkedInShareUrl = "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=" + encodeURIComponent(fullUrl)
     return (
         <div>
             <Head>
@@ -69,12 +70,10 @@ export default function Scribble({ frontmatter, mdxSource }) {
 
                 <ScribbleContent frontmatter={frontmatter} mdxSource={mdxSource} />
                 <div className="bottomLine"> </div>
+                <div className="space"></div>
 
                 <div className="flex flex-ai-c">
-                    <p>
-                        Share on
-                    </p>
-
+                    <p>Share on </p>
                     <div className="flex">
                         <Link
                             target="_blank"
@@ -83,7 +82,7 @@ export default function Scribble({ frontmatter, mdxSource }) {
                             href={twitterShareUrl}
                         >
                             <FontAwesomeIcon
-                                className="socialIcon"
+                                className="shareSocialIcon"
                                 icon={faTwitter}
                             />
                         </Link>
@@ -94,20 +93,30 @@ export default function Scribble({ frontmatter, mdxSource }) {
                             href={linkedInShareUrl}
                         >
                             <FontAwesomeIcon
-                                className="socialIcon"
-                                icon={faLinkedin}
+                                className="shareSocialIcon"
+                                icon={faLinkedinIn}
                             />
                         </Link>
+
+                        <a>
+                            <FontAwesomeIcon
+                                className="shareSocialIcon copyLink"
+                                icon={faChain}
+                                onClick={() => copyToClipBoard({fullUrl: fullUrl})}
+                            />
+                        </a>
+
+
                     </div>
                 </div>
-
-                {/* 
-                <div className="scribbleContent contentTamil padding25">
-                    <MDXRemote {...mdxSource}></MDXRemote>
-                </div> */}
             </div>
         </div>
     );
+}
+
+function copyToClipBoard({fullUrl}){
+    navigator.clipboard.writeText(fullUrl)
+    toast("Copied to clipboard")
 }
 
 export function ScribbleContent({ frontmatter, mdxSource }) {
