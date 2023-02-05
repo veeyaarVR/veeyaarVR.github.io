@@ -20,8 +20,9 @@ export async function getStaticProps({ params: { slug } }) {
 export default function Scribble({ frontmatter, mdxSource }) {
     const router = useRouter()
     const href = router.pathname
-    const twitterShareUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(href)
-    const linkedInShareUrl = "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=" + encodeURIComponent(href)
+    const url = router.basePath
+    const twitterShareUrl = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url + href)
+    const linkedInShareUrl = "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=" + encodeURIComponent(url + href)
 
     return (
         <div>
@@ -79,7 +80,7 @@ export default function Scribble({ frontmatter, mdxSource }) {
                             target="_blank"
                             rel="noopener noreferrer"
                             data-size="large"
-                            href = {twitterShareUrl}
+                            href={twitterShareUrl}
                         >
                             <FontAwesomeIcon
                                 className="socialIcon"
@@ -90,7 +91,7 @@ export default function Scribble({ frontmatter, mdxSource }) {
                             target="_blank"
                             rel="noopener noreferrer"
                             data-size="large"
-                            href = {linkedInShareUrl}
+                            href={linkedInShareUrl}
                         >
                             <FontAwesomeIcon
                                 className="socialIcon"
