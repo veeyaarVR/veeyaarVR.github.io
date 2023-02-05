@@ -11,6 +11,11 @@ export async function getAllScribbles() {
         const { data: frontmatter } = matter(markDownMetaData)
         return { frontmatter, slug: filename.split('.')[0] }
     })
+
+    const sortedScribbles = scribbles.sort(function(a,b){
+        return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+    })
+
     return { props: { scribbles } }
 }
 

@@ -54,25 +54,31 @@ function HeaderSection() {
 }
 
 function ScribbleList({ scribbles }) {
-    return (
-        <div>
-            {scribbles.map((post, index) => (
-                <div
-                    className="scribblesList subHeadingSecondary textColor"
-                    key={post.slug}
-                >
-                    <Link
-                        href={{ pathname: `/personal/scribbles/${post.slug}` }}
+
+    if (scribbles == null) {
+        return <div></div>
+    } else {
+        return (
+            <div>
+                {scribbles.map((post, index) => (
+                    <div
+                        className="scribblesList subHeadingSecondary textColor"
                         key={post.slug}
                     >
-                        <div className="scribbleItem">
-                            • {post.frontmatter.title} | {post.frontmatter.date}
-                        </div>
-                    </Link>
-                </div>
-            ))}
-        </div>
-    );
+                        <Link
+                            href={{ pathname: `/personal/scribbles/${post.slug}` }}
+                            key={post.slug}
+                        >
+                            <div className="scribbleItem">
+                                • {post.frontmatter.title}<span className="colorSecondary"> | {post.frontmatter.date}</span>
+                            </div>
+                        </Link>
+                    </div>
+                ))}
+            </div>
+
+        );
+    }
 }
 
 function formatDate(date: Date) {
