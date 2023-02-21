@@ -1,6 +1,7 @@
 import { getAllScribbles, getWishlistContent } from "@/utils/mdx";
 import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Wishlist({ mdxSource }) {
     return (
@@ -21,8 +22,8 @@ export default function Wishlist({ mdxSource }) {
                 <div className="colorPrimary paddingVertical  homeLink">
                     <div className="space"></div>
                     <p>
-                        <a href="/">VIGNESH MARIMUTHU </a> /
-                        <a href="/personal"> PERSONAL </a> /
+                        <Link href="/">VIGNESH MARIMUTHU </Link> /
+                        <Link href="/personal"> PERSONAL </Link> /
                     </p>
                     <div className="bottomLine"> </div>
                     <div className="space"></div>
