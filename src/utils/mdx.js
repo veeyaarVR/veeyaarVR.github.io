@@ -58,3 +58,15 @@ export async function getContentBySlug({slug}) {
         }
     }
 }
+
+export async function getWishlistContent() {
+    const markdownFile = fs.readFileSync(path.join('src','contents','wishlist_content.mdx'))
+    const {content: content} = await matter(markdownFile)
+    const mdxSource = await serialize(content)
+
+    return {
+        props: {            
+            mdxSource
+        }
+    }
+}
