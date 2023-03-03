@@ -38,6 +38,10 @@ export default function Scribble({ frontmatter, mdxSource }) {
                 />
                 <meta name="image" content="https://vigneshmarimuthu.com/logo512.png" />
                 <meta property="og:image" content="https://vigneshmarimuthu.com/logo512.png"></meta>
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content= {frontmatter.title} />
+                <meta name="twitter:description" content="This is my personal blog which tells a lot about who I am and my opinions, that nobody asked for" />
+                <meta name="twitter:image" content="https://vigneshmarimuthu.com/logo512.png" />
 
             </Head>
 

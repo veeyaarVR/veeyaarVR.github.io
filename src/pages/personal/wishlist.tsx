@@ -17,6 +17,7 @@ export default function Wishlist({ mdxSource }) {
                 />
                 <meta name="image" content="https://vigneshmarimuthu.com/logo512.png" />
                 <meta property="og:image" content="https://vigneshmarimuthu.com/logo512.png"></meta>
+                <meta name="twitter:card" content="summary" />
             </Head>
             <div className="bookScreen superPadding fullScreen">
                 <div className="colorPrimary paddingVertical  homeLink">
