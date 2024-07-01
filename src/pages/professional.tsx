@@ -1,11 +1,9 @@
 "use client";
 
-import { Models } from "appwrite";
 import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { databases } from "../pages/appwrite";
-import { getAllProjects } from "../pages/api/projects";
 
 export default function Professional() {
   return (
