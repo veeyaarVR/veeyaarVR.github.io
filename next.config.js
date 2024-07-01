@@ -5,7 +5,7 @@ const nextConfig = {
     path: 'public/next.svg',
   },
   distDir: 'build',
-  reactStrictMode: true,
+  reactStrictMode: false,
 }
 
 
