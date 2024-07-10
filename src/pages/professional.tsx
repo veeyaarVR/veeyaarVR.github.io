@@ -181,7 +181,7 @@ function ProjectsList() {
     return (
       <div>
         {projects.map((project) => (
-          <div>
+          <div key={project.title}>
             <div className="companyInfo" key={project.title}>
               <div className="subHeadingPrimary colorPrimary">{project.title}</div>
               <div className="dateText colorSecondary companyDate">
