@@ -8,24 +8,22 @@ const JournalScreen = () => {
   const router = useRouter()
   const [user, setUser] = useState(null);
 
-  const getAccount = async () => { 
-    try {
-      const accountData = await account.get();
-      console.log(accountData);
-      if (!accountData['labels'].includes("admin")) {
-          router.push('/authfailed')
-      } else {
-        setUser(accountData);
-      }
-    } catch {
-      // redirect to login screen, if user is not logged in yet
-      router.push('/login')
-    }
-  };
-
   useEffect(() => {
-    getAccount();
-  }, []);
+    async () => { 
+      try {
+        const accountData = await account.get();
+        console.log(accountData);
+        if (!accountData['labels'].includes("admin")) {
+            router.push('/authfailed')
+        } else {
+          setUser(accountData);
+        }
+      } catch {
+        // redirect to login screen, if user is not logged in yet
+        router.push('/login')
+      }
+    }
+  }, [router]);
 
   if (user == null) {
     return <div>validating...</div>    
