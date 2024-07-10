@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { account } from "./appwrite";
+import { account } from "../api/appwrite";
 import { useRouter } from 'next/navigation'
 
 const JournalScreen = () => {

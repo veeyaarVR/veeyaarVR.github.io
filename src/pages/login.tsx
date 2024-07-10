@@ -3,7 +3,7 @@
 import React from "react";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { account } from "./appwrite";
+import { account } from "../api/appwrite";
 import { OAuthProvider } from "appwrite";
 
 const LoginScreen = () => {
