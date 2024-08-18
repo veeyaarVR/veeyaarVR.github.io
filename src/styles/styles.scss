@@ -10,4 +10,7 @@
 @import "components/__components-dir";
 
 //Screens
-@import "screens/__screens-dir"
+@import "screens/__screens-dir";
+
+@import 'react-date-range/dist/styles.css'; // main style file
+@import 'react-date-range/dist/theme/default.css'; // theme css file
