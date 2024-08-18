@@ -74,6 +74,9 @@
 
   &-jc-sb {
     justify-content: space-between;
+    @include phone {
+      justify-content: center;
+    }
   }
 
   &-jc-se {
@@ -82,6 +85,13 @@
 
   &-jc-start {
     justify-content: flex-start;
+    @include phone {
+      justify-content: center;
+    }
+  }
+
+  &-jc-end {
+    justify-content: flex-end;
     @include phone {
       justify-content: center;
     }
@@ -101,6 +111,10 @@
   &-jc-sa {
     justify-content: space-around;
   }
+}
+
+.flexThirty {
+  flex: 120%;
 }
 
 .fullScreen {
@@ -131,6 +145,15 @@
     text-align: center;
   }
 }
+
+.textAlignJustify {
+  text-align: justify;
+
+  @include phone {
+    text-align: justify;
+  }
+}
+
 
 .spinner {
   width: 40px;
