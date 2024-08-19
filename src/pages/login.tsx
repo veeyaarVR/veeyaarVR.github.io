@@ -7,7 +7,7 @@ import { account } from "../api/appwrite";
 import { OAuthProvider } from "appwrite";
 
 const LoginScreen = () => {
-  const isLive = !window.location.origin.includes('localhost'); // Check if live based on origin
+  const isLive = !globalThis.location.origin.includes('localhost'); // Check if live based on origin
 
   return (
     <div className="colorPrimary homeLink centerAll superPaddingVertical">
