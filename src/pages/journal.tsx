@@ -1,43 +1,26 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { account } from "../api/appwrite";
-import { useRouter } from "next/navigation";
 import { databases } from "../api/appwrite";
 import { Calendar } from "react-date-range";
 import { Query } from "appwrite";
 import moment from "moment-timezone";
 
 const JournalScreen = () => {
-  const router = useRouter();
-  const [user, setUser] = useState(null);
-  const [entries, setEntries] = useState([]);
+  const [entries, setEntries] = useState(null);
   const [shouldOpenCalendar, changeCalendarState] = useState(false);
   const [selectedTimeStamp, updateTimeStamp] = useState(new Date(Date.now()));
 
   useEffect(() => {
-    const getUser = async () => {
-      try {
-        const accountData = await account.get();
-        console.log(accountData);
-        if (!accountData["labels"].includes("admin")) {
-          router.push("/authfailed");
-        } else {
-          setUser(accountData);
-          fetchEntries();
-        }
-      } catch {
-        // redirect to login screen, if user is not logged in yet
-        router.push("/login");
-      }
-    };
-    getUser();
-  }, [router]);
+    (async () => {
+      await fetchEntries(selectedTimeStamp);
+    })();
+  }, [selectedTimeStamp])
 
-  async function fetchEntries() {
-    const dateInMoment = moment.utc(selectedTimeStamp).local(); // Get the current date and time
+  async function fetchEntries(selectedDate: Date) {
+    console.log('date: lastSelectedTimeStamp -> ' + selectedDate)
+    const dateInMoment = moment.utc(selectedDate).local(); // Get the current date and time
     const isoStringWithTimezone = dateInMoment.toISOString(true).split("T")[0]; // true includes the offset
-    console.log('date is ' + selectedTimeStamp)
 
     try {
       const posts = await databases.listDocuments(
@@ -61,70 +44,65 @@ const JournalScreen = () => {
     }
   }
 
-  const updateSelectedDateUI = async(selectedDate: Date) => {
-    console.log('date is before ' + selectedDate)
+  const updateSelectedDateUI = async (selectedDate: Date) => {
+    console.log('date: selectedDate -> ' + selectedDate)
     updateTimeStamp(selectedDate);
     changeCalendarState(false);
-    await fetchEntries();
   };
 
-  if (user == null) {
-    return <div>validating...</div>;
+  if (entries == null) {
+    return <div>fetching entries...</div>;
   } else {
-    if (entries == null) {
-      return <div>fetching entries...</div>;
-    } else {
-      return (
-        <div className="padding25 superPadding">
-          <div className=" flex flex-jc-sb flex-ai-c">
-            <div>
-              <div className="superTitlePrimary colorPrimary">Journal</div>
-              <div className="smallHeadingPrimary colorPrimary">
-                inspired from Mark Zuckerberg (Social network)
-              </div>
-            </div>
-            <div>
-              <button
-                onClick={() => {
-                  changeCalendarState(!shouldOpenCalendar);
-                }}
-                className="interests buttonText colorSecondary"
-              >
-                {extractDateFromTimeStamp(selectedTimeStamp)}
-              </button>
+    return (
+      <div className="padding25 superPadding">
+        <div className=" flex flex-jc-sb flex-ai-c">
+          <div>
+            <div className="superTitlePrimary colorPrimary">Journal</div>
+            <div className="smallHeadingPrimary colorPrimary">
+              inspired from the Social network
             </div>
           </div>
-          <div className="flex flex-jc-end">
-            {shouldOpenCalendar ? (
-              <Calendar
-                date={selectedTimeStamp}
-                onChange={updateSelectedDateUI}
-              />
-            ) : (
-              ""
-            )}
-          </div>
-          <div className="superPaddingVertical">
-            {!Array.isArray(entries) || !entries.length ?(
-              <div className=" padding25 justify-center flex flex-ai-c">No entries made on that day! </div>
-            ): (
-              entries.map((entry) => (
-                <div key={entry.entry} className="journal-entry">
-                  <div className="padding25" key={entry.entry}>
-                    <p className="colorPrimary subHeadingSecondary ">
-                      {entry.entry}
-                    </p>
-                    <p className="colorSecondary">
-                      {extractTimeFromTimestamp(entry.date)}
-                    </p>
-                  </div>
-                </div>
-              ))
-            ) }
+          <div>
+            <button
+              onClick={() => {
+                changeCalendarState(!shouldOpenCalendar);
+              }}
+              className="interests buttonText colorSecondary"
+            >
+              {extractDateFromTimeStamp(selectedTimeStamp)}
+            </button>
           </div>
         </div>
-      );
-    }
+        <div className="flex flex-jc-end">
+          {shouldOpenCalendar ? (
+            <Calendar
+              date={selectedTimeStamp}
+              onChange={updateSelectedDateUI}
+            />
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="superPaddingVertical">
+          {!Array.isArray(entries) || !entries.length ? (
+            <div className=" padding25 justify-center flex flex-ai-c">No entries made on that day! </div>
+          ) : (
+            entries.map((entry) => (
+              <div key={entry.entry} className="journal-entry">
+                <div className="padding25" key={entry.entry}>
+                  <p className="colorPrimary subHeadingSecondary ">
+                    {entry.entry}
+                  </p>
+                  <p className="colorSecondary">
+                    {extractTimeFromTimestamp(entry.date)}
+                  </p>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+    );
   }
 
   function extractTimeFromTimestamp(timestamp: string) {

@@ -7,6 +7,8 @@ import { account } from "../api/appwrite";
 import { OAuthProvider } from "appwrite";
 
 const LoginScreen = () => {
+  const isLive = !window.location.origin.includes('localhost'); // Check if live based on origin
+
   return (
     <div className="colorPrimary homeLink centerAll superPaddingVertical">
       <h1 className="subHeadingSecondary">Hi Vignesh. Login to continue</h1>
@@ -16,8 +18,8 @@ const LoginScreen = () => {
           onClick={() => {
             account.createOAuth2Session(
               OAuthProvider.Google,
-              "http://localhost:3000/journal", // Success URL
-              "http://localhost:3000/" // Failure URL
+              isLive ? 'https://vigneshmarimuthu.com/journal' : 'http://localhost:3000/journal', // Success URL
+              isLive ? 'https://vigneshmarimuthu.com/' : 'http://localhost:3000/', // failure URL
             );
           }}
         >
