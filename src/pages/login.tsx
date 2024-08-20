@@ -1,13 +1,20 @@
 "use client";
 
-import React from "react";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { account } from "../api/appwrite";
 import { OAuthProvider } from "appwrite";
+import React, { useEffect, useState } from "react";
 
 const LoginScreen = () => {
-  const isLive = !globalThis.location.origin.includes('localhost'); // Check if live based on origin
+  const [isLive, setIsLive] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const isLive = !window.location?.origin?.includes("localhost"); // Check if live based on origin
+      setIsLive(isLive)
+    })();
+  }, [])
 
   return (
     <div className="colorPrimary homeLink centerAll superPaddingVertical">
