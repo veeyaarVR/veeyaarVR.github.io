@@ -25,7 +25,7 @@ const LoginScreen = () => {
           onClick={() => {
             account.createOAuth2Session(
               OAuthProvider.Google,
-              isLive ? 'https://vigneshmarimuthu.com/journal' : 'http://localhost:3000/journal', // Success URL
+              isLive ? 'https://vigneshmarimuthu.com/addentry' : 'http://localhost:3000/addentry', // Success URL
               isLive ? 'https://vigneshmarimuthu.com/' : 'http://localhost:3000/', // failure URL
             );
           }}
