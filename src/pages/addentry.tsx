@@ -59,7 +59,7 @@ const AddEntryScreen = () => {
           <div >
             <div className="superTitlePrimary colorPrimary">Journal Entry</div>
             <div className="smallHeadingPrimary colorPrimary">
-              write away... don't think twice!
+              {`write away... don't think twice!`}
             </div>
           </div>
           <textarea value={entry} id="fname" name="journal-entry" placeholder="what's up...?" onChange={handleChange} className="textFieldJournal"></textarea>
