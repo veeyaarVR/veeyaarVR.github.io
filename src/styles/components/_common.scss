@@ -26,6 +26,30 @@
   }
 }
 
+.articlePadding {
+  padding-top: 10%;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 10%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  @include phone {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @include tablet {
+    padding-top: 5%;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
 .superPaddingArticle {
   padding-left: 20%;
   padding-right: 20%;
@@ -111,6 +135,17 @@
   &-jc-sa {
     justify-content: space-around;
   }
+
+  &-dir-c {
+    height: 100%;
+    flex-direction: column;
+  }
+}
+
+.textFieldJournal {
+  flex: 1 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .flexThirty {

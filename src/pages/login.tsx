@@ -1,12 +1,21 @@
 "use client";
 
-import React from "react";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { account } from "../api/appwrite";
 import { OAuthProvider } from "appwrite";
+import React, { useEffect, useState } from "react";
 
 const LoginScreen = () => {
+  const [isLive, setIsLive] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const isLive = !window.location?.origin?.includes("localhost"); // Check if live based on origin
+      setIsLive(isLive)
+    })();
+  }, [])
+
   return (
     <div className="colorPrimary homeLink centerAll superPaddingVertical">
       <h1 className="subHeadingSecondary">Hi Vignesh. Login to continue</h1>
@@ -16,8 +25,8 @@ const LoginScreen = () => {
           onClick={() => {
             account.createOAuth2Session(
               OAuthProvider.Google,
-              "http://localhost:3000/journal", // Success URL
-              "http://localhost:3000/" // Failure URL
+              isLive ? 'https://vigneshmarimuthu.com/addentry' : 'http://localhost:3000/addentry', // Success URL
+              isLive ? 'https://vigneshmarimuthu.com/' : 'http://localhost:3000/', // failure URL
             );
           }}
         >
