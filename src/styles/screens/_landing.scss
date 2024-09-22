@@ -1,15 +1,16 @@
 .landing {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 8rem;
 
     @include tablet {
-        padding-left: 4rem;
-        padding-right: 4rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
           }
 
     @include phone {
-        padding-left: 0rem;
-        padding-right: 0rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
     }      
 }
 
@@ -17,16 +18,4 @@
     display: flex;
     margin: 6rem;
     gap: 1rem;
-}
-
-.stickyContainer {
-    display: block;
-    position: sticky;
-    top: 10px;
-    min-height: fit-content;
-    position: -webkit-sticky;
-}
-
-.regularContainer {
-    display:block;
 }

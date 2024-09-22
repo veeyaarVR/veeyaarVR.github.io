@@ -1,4 +1,14 @@
-import { faMedium, faReddit, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faGooglePlay,
+  faHashnode,
+  faLinkedin,
+  faLinkedinIn,
+  faMedium,
+  faReddit,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
@@ -21,157 +31,88 @@ const shortStory = (
       Blog
     </Link>
     , where I post and write tech tutorials. (Yeah! Nerd.)<br></br>
-    <br></br>Selectively social, constant learner, cis-het, creative at night, motivated during shower,
-    occasionally good lookin and a humble human being. Belongs to House Targaryen.<br></br>
-    <br></br>I am that guy, who cuts your call and texts you back, <i>I&apos;ll call you
-      later</i>, but never does.
+    <br></br>Selectively social, constant learner, cis-het, creative at night,
+    motivated during shower, occasionally good lookin and a humble human being.
+    Belongs to House Targaryen.<br></br>
+    <br></br>I am that guy, who cuts your call and texts you back,{" "}
+    <i>I&apos;ll call you later</i>, but never does.
   </>
 );
 export default function Personal() {
   return (
     <main>
       <Head>
-        <title>
-          Personal | Vignesh Marimuthu
-        </title>
+        <title>Personal | Vignesh Marimuthu</title>
         <meta
           name="description"
           content="This is my personal blog which tells a lot about who I am and my opinions, that nobody asked for"
           key="desc"
         />
         <meta name="image" content="https://vigneshmarimuthu.com/logo512.png" />
-        <meta property="og:image" content="https://vigneshmarimuthu.com/logo512.png"></meta>
-
+        <meta
+          property="og:image"
+          content="https://vigneshmarimuthu.com/logo512.png"
+        ></meta>
       </Head>
-        {/* <ParticleComponent /> */}
-        <div className="landingContainer flex-jc-sb">
-          <div className="stickyContainer flex-jc-sb">
-            <h1 className="smallHeadingPrimary colorSecondary">
-              👋 Hello there, my name is
-            </h1>
-            <h1
-              className="superTitlePrimary colorPrimary"
-              data-text="Vignesh Marimuthu"
-            >
-              Vignesh Marimuthu
-            </h1>
 
-            <div className="flex flex-jc-start">
-              <Link
-                href="/personal"
-                className="personal-link buttonText colorSecondary"
-              >
-                Personal →
-              </Link>
-              <Link
-                href="/professional"
-                className="personal-link buttonText colorSecondary"
-              >
-                Professional →
-              </Link>
+      <div>
+
+        <div className="landing">
+          <div className="flex flex-dir-c flex-ai-c flex-jc-c superPaddingVertical">
+            <div>
+              <img
+                src="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f01e3000339a63e72d/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin"
+                alt="round images" 
+                className="round-image"
+              ></img>
             </div>
-          </div>
-          <div className="regularContainer">
-            <ShortStorySection />
-          <ShortStorySection />
-          <ShortStorySection />
+            <div className="spacer"></div>
+            <h1 className="smallHeadingPrimary colorSecondary">
+              👋 Hi, I am Vignesh Marimuthu
+            </h1>
+            <div className="spacer"></div>
+            <h2 className="alignCenter">Building pixel perfect✨ scalable📈 high quality<br></br>mobile applications📱in Native Android framework.</h2>
 
+            <div className="flex flex-ai-c flex-jc-c">
+          <Link href="https://github.com/veeyaarVR">
+            <FontAwesomeIcon
+              className="socialIcon fa-xl"
+              icon={faGithub}
+              
+            />
+          </Link>
+          <Link href="https://www.youtube.com/@BeingAverageEngineer">
+            <FontAwesomeIcon className="socialIcon fa-xl" icon={faYoutube} />
+          </Link>
+          <Link href="https://blog.vigneshmarimuthu.com">
+            <FontAwesomeIcon className="socialIcon fa-xl" icon={faHashnode}  />
+          </Link>
+          <Link href="https://play.google.com/store/apps/developer?id=Vignesh+Marimuthu">
+            <FontAwesomeIcon className="socialIcon fa-xl" icon={faGooglePlay} />
+          </Link>
+          <Link href="https://www.linkedin.com/in/vignesh-marimuthu-023552184/">
+            <FontAwesomeIcon className="socialIcon fa-xl" icon={faLinkedin}  />
+          </Link>
+        </div>
           </div>
+          <IntroSection></IntroSection>
         </div>
 
+        <div className="dark-layer">
+        <ParticleComponent />
 
+        </div>
+      </div>
     </main>
-
   );
 }
 
 function IntroSection() {
   return (
-    <div className="superPaddingVertical flex flex-jc-sa flex-ai-s superPadding introContainer">
-      <div className="flexThirty">
-        <h1 className="superTitleSecondary colorPrimary padding">
-          VIGNESH MARIMUTHU
-        </h1>
-        <h1
-          className="subHeadingPrimary colorSecondary"
-        >
-          Senior Android Developer
-        </h1>
-      </div>
-      <p className="subHeadingSecondary colorPrimary superPadding textAlignJustify">
+    <div className="superPaddingVertical flex flex-jc-sa flex-ai-s">
+      <p className="subHeadingSecondary colorPrimary textAlignJustify">
         {shortStory}
       </p>
-    </div>
-  );
-}
-
-function ShortStorySection() {
-  return (
-      <div className="">
-        <h1
-          className="superTitlePrimary  padding25 colorSecondary"
-          data-text="Vignesh Marimuthu"
-        >
-          ShortStory
-        </h1>
-        <p className="subHeadingSecondary padding25 colorPrimary textAlignCenter">
-          {shortStory}
-        </p>
-      </div>
-  );
-}
-
-function SocialLinks() {
-  return (
-    <div className="flex flex-ai-c flex-jc-c superPadding">
-      <div>
-        <div className="subHeadingSecondary colorSecondary subHeadingSecondary-align-center padding25">
-          Connect with me even if you don&apos;t vibe with any of the above 🙌
-          <br></br> I desperately need some friends.
-        </div>
-        <div className="flex flex-ai-c flex-jc-c">
-          <Link href="https://twitter.com/veeraakurilil">
-            <FontAwesomeIcon
-              className="socialIcon"
-              icon={faTwitter}
-              size="2x"
-            />
-          </Link>
-          <Link href="https://www.reddit.com/user/VeeraaKurilil">
-            <FontAwesomeIcon className="socialIcon" icon={faReddit} size="2x" />
-          </Link>
-          <Link href="https://medium.com/@vigneshmarimuthu2302">
-            <FontAwesomeIcon className="socialIcon" icon={faMedium} size="2x" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function WishListInfo() {
-  return (
-    <div className="flex flex-ai-c flex-jc-c ">
-      <div>
-        <div className=" subHeadingSecondary colorPrimary subHeadingSecondary-align-center padding25">
-          Incase and unfortunately, if you are already my friend 😅
-          <br></br> I have shamelessly made a wishlist of things, that you can
-          gift me 🥳
-        </div>
-        <div className="flex flex-ai-c flex-jc-c">
-          <Link
-            href="/personal/wishlist"
-            className="personal-link buttonText colorSecondary"
-          >
-            My Wishlist →
-          </Link>
-        </div>
-        <div className="space"></div>
-        <div className="space"></div>
-        <div className="space"></div>
-        <div className="space"></div>
-      </div>
-
     </div>
   );
 }
