@@ -2,41 +2,7 @@ import { faMedium, faReddit, faTwitter } from "@fortawesome/free-brands-svg-icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
-let interestList = [
-  "Minimalism",
-  "Atheism",
-  "Periyaar",
-  "Ambedkar",
-  "Nolan Movies",
-  "U1 Songs",
-  "Solo Bike Rides",
-  "F.R.I.E.N.D.S",
-  "Game of Thrones",
-  "Mech KB",
-  "Coding",
-  "Harmonica",
-  "Sci-Fi Movies",
-  "Vijay Antony",
-  "Torantino",
-  "Long Car Rides",
-  "Ilayaraja",
-  "Paulo Coelho",
-  "Communism",
-  "Cs:GO",
-  "Ginger Tea",
-  "Slow living",
-  "Naruto",
-  "Beach",
-  "Train Travel",
-  "Bomb Squad",
-  "Desk Setup",
-  "Solid Tee",
-  "Santhosh Narayanan",
-  "Pradeep Kumar",
-  "MKBHD",
-  "Mysskin",
-  "Time Travel",
-];
+import ParticleComponent from "@/components/ParticleComponent";
 
 const shortStory = (
   <>
@@ -77,13 +43,43 @@ export default function Personal() {
         <meta property="og:image" content="https://vigneshmarimuthu.com/logo512.png"></meta>
 
       </Head>
-      <div className="personal">
-        <IntroSection />
-        <ShortStorySection />
-        <LikesSection />
-        <SocialLinks />
-        <WishListInfo />
-      </div>
+        {/* <ParticleComponent /> */}
+        <div className="landingContainer flex-jc-sb">
+          <div className="stickyContainer flex-jc-sb">
+            <h1 className="smallHeadingPrimary colorSecondary">
+              👋 Hello there, my name is
+            </h1>
+            <h1
+              className="superTitlePrimary colorPrimary"
+              data-text="Vignesh Marimuthu"
+            >
+              Vignesh Marimuthu
+            </h1>
+
+            <div className="flex flex-jc-start">
+              <Link
+                href="/personal"
+                className="personal-link buttonText colorSecondary"
+              >
+                Personal →
+              </Link>
+              <Link
+                href="/professional"
+                className="personal-link buttonText colorSecondary"
+              >
+                Professional →
+              </Link>
+            </div>
+          </div>
+          <div className="regularContainer">
+            <ShortStorySection />
+          <ShortStorySection />
+          <ShortStorySection />
+
+          </div>
+        </div>
+
+
     </main>
 
   );
@@ -99,20 +95,19 @@ function IntroSection() {
         <h1
           className="subHeadingPrimary colorSecondary"
         >
-         Senior Android Developer
+          Senior Android Developer
         </h1>
       </div>
       <p className="subHeadingSecondary colorPrimary superPadding textAlignJustify">
-          {shortStory}
-        </p>
+        {shortStory}
+      </p>
     </div>
   );
 }
 
 function ShortStorySection() {
   return (
-    <div className="">
-      <div className="superPaddingVertical flex flex-jc-sa flex-ai-c superPadding">
+      <div className="">
         <h1
           className="superTitlePrimary  padding25 colorSecondary"
           data-text="Vignesh Marimuthu"
@@ -123,33 +118,6 @@ function ShortStorySection() {
           {shortStory}
         </p>
       </div>
-    </div>
-  );
-}
-
-function LikesSection() {
-  return (
-    <div className="fullScreen superPaddingVertical flex flex-ai-c flex-jc-c superPadding">
-      <div>
-        <div className="subHeadingPrimary subHeadingSecondary-align-center padding25 colorPrimary">
-          If you could vibe to a lot of the below, we can be great friends ✌️
-        </div>
-        <div className="likesContainer">
-          {interestList.map((item, index) => {
-            let url = "https://www.google.com/search?q=" + item;
-            return (
-              <Link
-                href={url}
-                key={url}
-                className="interests buttonText colorSecondary"
-              >
-                {item}
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-    </div>
   );
 }
 
