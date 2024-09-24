@@ -56,13 +56,12 @@ export default function Personal() {
       </Head>
 
       <div>
-
         <div className="landing">
           <div className="flex flex-dir-c flex-ai-c flex-jc-c superPaddingVertical">
             <div>
               <img
                 src="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f01e3000339a63e72d/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin"
-                alt="round images" 
+                alt="round images"
                 className="round-image"
               ></img>
             </div>
@@ -71,39 +70,95 @@ export default function Personal() {
               👋 Hi, I am Vignesh Marimuthu
             </h1>
             <div className="spacer"></div>
-            <h2 className="alignCenter">Building pixel perfect✨ scalable📈 high quality<br></br>mobile applications📱in Native Android framework.</h2>
+            <h2 className="alignCenter">
+              Building pixel perfect✨ scalable📈 high quality<br></br>mobile
+              applications📱in Native Android framework.
+            </h2>
 
             <div className="flex flex-ai-c flex-jc-c">
-          <Link href="https://github.com/veeyaarVR">
-            <FontAwesomeIcon
-              className="socialIcon fa-xl"
-              icon={faGithub}
-              
-            />
-          </Link>
-          <Link href="https://www.youtube.com/@BeingAverageEngineer">
-            <FontAwesomeIcon className="socialIcon fa-xl" icon={faYoutube} />
-          </Link>
-          <Link href="https://blog.vigneshmarimuthu.com">
-            <FontAwesomeIcon className="socialIcon fa-xl" icon={faHashnode}  />
-          </Link>
-          <Link href="https://play.google.com/store/apps/developer?id=Vignesh+Marimuthu">
-            <FontAwesomeIcon className="socialIcon fa-xl" icon={faGooglePlay} />
-          </Link>
-          <Link href="https://www.linkedin.com/in/vignesh-marimuthu-023552184/">
-            <FontAwesomeIcon className="socialIcon fa-xl" icon={faLinkedin}  />
-          </Link>
-        </div>
+              <Link href="https://github.com/veeyaarVR">
+                <FontAwesomeIcon className="socialIcon fa-xl" icon={faGithub} />
+              </Link>
+              <Link href="https://www.youtube.com/@BeingAverageEngineer">
+                <FontAwesomeIcon
+                  className="socialIcon fa-xl"
+                  icon={faYoutube}
+                />
+              </Link>
+              <Link href="https://blog.vigneshmarimuthu.com">
+                <FontAwesomeIcon
+                  className="socialIcon fa-xl"
+                  icon={faHashnode}
+                />
+              </Link>
+              <Link href="https://play.google.com/store/apps/developer?id=Vignesh+Marimuthu">
+                <FontAwesomeIcon
+                  className="socialIcon fa-xl"
+                  icon={faGooglePlay}
+                />
+              </Link>
+              <Link href="https://www.linkedin.com/in/vignesh-marimuthu-023552184/">
+                <FontAwesomeIcon
+                  className="socialIcon fa-xl"
+                  icon={faLinkedin}
+                />
+              </Link>
+            </div>
           </div>
           <IntroSection></IntroSection>
+          <ExperienceSection />
+          <div className="experienceContainer">
+            <h3 className="dateSection smallHeadingPrimary colorSecondary">
+              2018 — 2019
+            </h3>
+            <div className="experienceInfoSection">
+              <h4>Abservetech Pvt Ltd</h4>
+              <span>Senior Android Developer</span>
+              <div className="spacer"></div>
+              <div className="textAlignJustify">
+                Back in 2012, I decided to try my hand at creating custom Tumblr
+                themes and tumbled head first into the rabbit hole of coding and
+                web development. Fast-forward to today, and I’ve had the
+                privilege of building software for an advertising agency, a
+                start-up, a huge corporation, and a digital product studio.
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="dark-layer">
-        <ParticleComponent />
-
+          <ParticleComponent />
         </div>
       </div>
     </main>
+  );
+}
+
+function ExperienceSection() {
+  return (
+    <div className="experienceContainer">
+      <h3 className="dateSection smallHeadingPrimary colorSecondary">
+        2020 — Present
+      </h3>
+      <div className="experienceInfoSection">
+        <h4>Cumulations Technologies</h4>
+        <span>Senior Android Developer</span>
+        <div className="spacer"></div>
+        <div className="textAlignJustify">
+          Back in 2012, I decided to try my hand at creating custom Tumblr
+          themes and tumbled head first into the rabbit hole of coding and web
+          development. Fast-forward to today, and I’ve had the privilege of
+          building software for an advertising agency, a start-up, a huge
+          corporation, and a digital product studio.
+        </div>
+        <div className="likesContainer">
+          <div className="learnedSkills skillsText colorSecondary">Kotlin</div>
+          <div className="learnedSkills skillsText colorSecondary">Flutter</div>
+          <div className="learnedSkills skillsText colorSecondary">RxJava</div>
+          <div className="learnedSkills skillsText colorSecondary">MLKit</div>
+        </div>
+      </div>
+    </div>
   );
 }
 

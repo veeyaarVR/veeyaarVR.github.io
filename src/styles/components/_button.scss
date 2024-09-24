@@ -41,6 +41,29 @@
   }
 }
 
+.learnedSkills {
+  background-color: $colorAccent;
+  border: 1px solid $colorSecondary;
+  border-radius: 25px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  
+  &:hover {
+    outline: none;
+    background-color: $colorBackground;
+    text-decoration: none;
+  }
+
+  @include phone {
+    margin-right: 0px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
 .category-link {
   background-color: $colorAccent;
   border: 1px solid $colorSecondary;
