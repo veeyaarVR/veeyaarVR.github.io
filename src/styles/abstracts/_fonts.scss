@@ -70,3 +70,30 @@
   src: local("Ponni Regular"), url(../fonts/Tamil/TMOTKMN_Ship.TTF) format("truetype");
   font-weight: 400;
 }
+
+
+
+@font-face {
+  font-family: "Inter" sans-serif;
+  src: local("Inter Regular"),
+       url(../fonts/Inter/Inter-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter Light" sans-serif;
+  src: local("Inter Light"),
+    url(../fonts/Inter/Inter-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Inter Bold" sans-serif;
+  src: local("Inter Bold"),
+    url(../fonts/Inter/Inter-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Inter SemiBold" sans-serif;
+  src: local("Inter SemiBold"), url(../fonts/Inter/Inter-SemiBold.ttf) format("truetype");
+}

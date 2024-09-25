@@ -1,42 +1,18 @@
-import { faMedium, faReddit, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faGooglePlay,
+  faHashnode,
+  faLinkedin,
+  faLinkedinIn,
+  faMedium,
+  faReddit,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
-let interestList = [
-  "Minimalism",
-  "Atheism",
-  "Periyaar",
-  "Ambedkar",
-  "Nolan Movies",
-  "U1 Songs",
-  "Solo Bike Rides",
-  "F.R.I.E.N.D.S",
-  "Game of Thrones",
-  "Mech KB",
-  "Coding",
-  "Harmonica",
-  "Sci-Fi Movies",
-  "Vijay Antony",
-  "Torantino",
-  "Long Car Rides",
-  "Ilayaraja",
-  "Paulo Coelho",
-  "Communism",
-  "Cs:GO",
-  "Ginger Tea",
-  "Slow living",
-  "Naruto",
-  "Beach",
-  "Train Travel",
-  "Bomb Squad",
-  "Desk Setup",
-  "Solid Tee",
-  "Santhosh Narayanan",
-  "Pradeep Kumar",
-  "MKBHD",
-  "Mysskin",
-  "Time Travel",
-];
+import ParticleComponent from "@/components/ParticleComponent";
 
 const shortStory = (
   <>
@@ -55,155 +31,143 @@ const shortStory = (
       Blog
     </Link>
     , where I post and write tech tutorials. (Yeah! Nerd.)<br></br>
-    <br></br>Selectively social, constant learner, cis-het, creative at night, motivated during shower,
-    occasionally good lookin and a humble human being. Belongs to House Targaryen.<br></br>
-    <br></br>I am that guy, who cuts your call and texts you back, <i>I&apos;ll call you
-      later</i>, but never does.
+    <br></br>Selectively social, constant learner, cis-het, creative at night,
+    motivated during shower, occasionally good lookin and a humble human being.
+    Belongs to House Targaryen.<br></br>
+    <br></br>I am that guy, who cuts your call and texts you back,{" "}
+    <i>I&apos;ll call you later</i>, but never does.
   </>
 );
 export default function Personal() {
   return (
     <main>
       <Head>
-        <title>
-          Personal | Vignesh Marimuthu
-        </title>
+        <title>Personal | Vignesh Marimuthu</title>
         <meta
           name="description"
           content="This is my personal blog which tells a lot about who I am and my opinions, that nobody asked for"
           key="desc"
         />
         <meta name="image" content="https://vigneshmarimuthu.com/logo512.png" />
-        <meta property="og:image" content="https://vigneshmarimuthu.com/logo512.png"></meta>
-
+        <meta
+          property="og:image"
+          content="https://vigneshmarimuthu.com/logo512.png"
+        ></meta>
       </Head>
-      <div className="personal">
-        <IntroSection />
-        <ShortStorySection />
-        <LikesSection />
-        <SocialLinks />
-        <WishListInfo />
+
+      <div>
+        <div className="landing">
+          <div className="flex flex-dir-c flex-ai-c flex-jc-c superPaddingVertical">
+            <div>
+              <img
+                src="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f01e3000339a63e72d/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin"
+                alt="round images"
+                className="round-image"
+              ></img>
+            </div>
+            <div className="spacer"></div>
+            <h1 className="smallHeadingPrimary colorSecondary">
+              👋 Hi, I am Vignesh Marimuthu
+            </h1>
+            <div className="spacer"></div>
+            <h2 className="alignCenter">
+              Building pixel perfect✨ scalable📈 high quality<br></br>mobile
+              applications📱in Native Android framework.
+            </h2>
+
+            <div className="flex flex-ai-c flex-jc-c">
+              <Link href="https://github.com/veeyaarVR">
+                <FontAwesomeIcon className="socialIcon fa-xl" icon={faGithub} />
+              </Link>
+              <Link href="https://www.youtube.com/@BeingAverageEngineer">
+                <FontAwesomeIcon
+                  className="socialIcon fa-xl"
+                  icon={faYoutube}
+                />
+              </Link>
+              <Link href="https://blog.vigneshmarimuthu.com">
+                <FontAwesomeIcon
+                  className="socialIcon fa-xl"
+                  icon={faHashnode}
+                />
+              </Link>
+              <Link href="https://play.google.com/store/apps/developer?id=Vignesh+Marimuthu">
+                <FontAwesomeIcon
+                  className="socialIcon fa-xl"
+                  icon={faGooglePlay}
+                />
+              </Link>
+              <Link href="https://www.linkedin.com/in/vignesh-marimuthu-023552184/">
+                <FontAwesomeIcon
+                  className="socialIcon fa-xl"
+                  icon={faLinkedin}
+                />
+              </Link>
+            </div>
+          </div>
+          <IntroSection></IntroSection>
+          <ExperienceSection />
+          <div className="experienceContainer">
+            <h3 className="dateSection smallHeadingPrimary colorSecondary">
+              2018 — 2019
+            </h3>
+            <div className="experienceInfoSection">
+              <h4>Abservetech Pvt Ltd</h4>
+              <span>Senior Android Developer</span>
+              <div className="spacer"></div>
+              <div className="textAlignJustify">
+                Back in 2012, I decided to try my hand at creating custom Tumblr
+                themes and tumbled head first into the rabbit hole of coding and
+                web development. Fast-forward to today, and I’ve had the
+                privilege of building software for an advertising agency, a
+                start-up, a huge corporation, and a digital product studio.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="dark-layer">
+          <ParticleComponent />
+        </div>
       </div>
     </main>
+  );
+}
 
+function ExperienceSection() {
+  return (
+    <div className="experienceContainer">
+      <h3 className="dateSection smallHeadingPrimary colorSecondary">
+        2020 — Present
+      </h3>
+      <div className="experienceInfoSection">
+        <h4>Cumulations Technologies</h4>
+        <span>Senior Android Developer</span>
+        <div className="spacer"></div>
+        <div className="textAlignJustify">
+          Back in 2012, I decided to try my hand at creating custom Tumblr
+          themes and tumbled head first into the rabbit hole of coding and web
+          development. Fast-forward to today, and I’ve had the privilege of
+          building software for an advertising agency, a start-up, a huge
+          corporation, and a digital product studio.
+        </div>
+        <div className="likesContainer">
+          <div className="learnedSkills skillsText colorSecondary">Kotlin</div>
+          <div className="learnedSkills skillsText colorSecondary">Flutter</div>
+          <div className="learnedSkills skillsText colorSecondary">RxJava</div>
+          <div className="learnedSkills skillsText colorSecondary">MLKit</div>
+        </div>
+      </div>
+    </div>
   );
 }
 
 function IntroSection() {
   return (
-    <div className="superPaddingVertical flex flex-jc-sa flex-ai-s superPadding introContainer">
-      <div className="flexThirty">
-        <h1 className="superTitleSecondary colorPrimary padding">
-          VIGNESH MARIMUTHU
-        </h1>
-        <h1
-          className="subHeadingPrimary colorSecondary"
-        >
-         Senior Android Developer
-        </h1>
-      </div>
-      <p className="subHeadingSecondary colorPrimary superPadding textAlignJustify">
-          {shortStory}
-        </p>
-    </div>
-  );
-}
-
-function ShortStorySection() {
-  return (
-    <div className="">
-      <div className="superPaddingVertical flex flex-jc-sa flex-ai-c superPadding">
-        <h1
-          className="superTitlePrimary  padding25 colorSecondary"
-          data-text="Vignesh Marimuthu"
-        >
-          ShortStory
-        </h1>
-        <p className="subHeadingSecondary padding25 colorPrimary textAlignCenter">
-          {shortStory}
-        </p>
-      </div>
-    </div>
-  );
-}
-
-function LikesSection() {
-  return (
-    <div className="fullScreen superPaddingVertical flex flex-ai-c flex-jc-c superPadding">
-      <div>
-        <div className="subHeadingPrimary subHeadingSecondary-align-center padding25 colorPrimary">
-          If you could vibe to a lot of the below, we can be great friends ✌️
-        </div>
-        <div className="likesContainer">
-          {interestList.map((item, index) => {
-            let url = "https://www.google.com/search?q=" + item;
-            return (
-              <Link
-                href={url}
-                key={url}
-                className="interests buttonText colorSecondary"
-              >
-                {item}
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SocialLinks() {
-  return (
-    <div className="flex flex-ai-c flex-jc-c superPadding">
-      <div>
-        <div className="subHeadingSecondary colorSecondary subHeadingSecondary-align-center padding25">
-          Connect with me even if you don&apos;t vibe with any of the above 🙌
-          <br></br> I desperately need some friends.
-        </div>
-        <div className="flex flex-ai-c flex-jc-c">
-          <Link href="https://twitter.com/veeraakurilil">
-            <FontAwesomeIcon
-              className="socialIcon"
-              icon={faTwitter}
-              size="2x"
-            />
-          </Link>
-          <Link href="https://www.reddit.com/user/VeeraaKurilil">
-            <FontAwesomeIcon className="socialIcon" icon={faReddit} size="2x" />
-          </Link>
-          <Link href="https://medium.com/@vigneshmarimuthu2302">
-            <FontAwesomeIcon className="socialIcon" icon={faMedium} size="2x" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function WishListInfo() {
-  return (
-    <div className="flex flex-ai-c flex-jc-c ">
-      <div>
-        <div className=" subHeadingSecondary colorPrimary subHeadingSecondary-align-center padding25">
-          Incase and unfortunately, if you are already my friend 😅
-          <br></br> I have shamelessly made a wishlist of things, that you can
-          gift me 🥳
-        </div>
-        <div className="flex flex-ai-c flex-jc-c">
-          <Link
-            href="/personal/wishlist"
-            className="personal-link buttonText colorSecondary"
-          >
-            My Wishlist →
-          </Link>
-        </div>
-        <div className="space"></div>
-        <div className="space"></div>
-        <div className="space"></div>
-        <div className="space"></div>
-      </div>
-
+    <div className="superPaddingVertical flex flex-jc-sa flex-ai-s">
+      <p className="subHeadingSecondary colorPrimary textAlignJustify">
+        {shortStory}
+      </p>
     </div>
   );
 }

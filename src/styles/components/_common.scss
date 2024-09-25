@@ -157,9 +157,9 @@
 }
 
 .socialIcon {
-  size: 2x;
   color: $colorPrimary;
-  margin: 10px;
+  padding: 10px;
+  size: 2x;
   &:hover {
     color: $colorSecondary;
   }
@@ -168,6 +168,7 @@
 .shareSocialIcon {
   color: $colorSecondary;
   margin-left: 15px;
+
   &:hover {
     color: $colorPrimary;
   }
@@ -225,4 +226,29 @@
     transform: scale(1.0);
     opacity: 0;
   }
+}
+
+.round-image{
+	border-radius:100%; 
+	height: 125px; 
+	margin: 0 auto;
+	width: 125px; 
+  object-fit: cover;
+  overflow:hidden;
+  transition: top .2s ease-in-out,width .5s,height .5s;
+}
+.round-image:hover{
+  width: 150px;
+  height: 150px;
+}
+
+.spacer {
+  height: 15px;
+}
+
+.dark-layer {
+  background-color: rgba(0, 0, 0, .6);
+  height: 100%;
+  width: 100%;
+  position: fixed;
 }

@@ -55,6 +55,14 @@
   text-decoration: none;
 }
 
+
+.skillText {
+  line-height: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
 .tagText {
   line-height: 1;
   font-family: "SpaceMono SemiBold", sans-serif;
@@ -174,5 +182,9 @@
 
 .allCaps{
   text-transform: uppercase;
+}
+
+.alignCenter {
+  text-align: center;
 }
 

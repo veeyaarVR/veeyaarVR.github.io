@@ -1,0 +1,50 @@
+.landing {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 8rem;
+
+    @include tablet {
+        margin-left: 4rem;
+        margin-right: 4rem;
+          }
+
+    @include phone {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }      
+}
+
+.landingContainer {
+    display: flex;
+    margin: 6rem;
+    gap: 1rem;
+}
+
+.experienceContainer {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));;
+    column-gap: 50px;
+    margin-bottom: 10px;
+
+    @include phone {
+        display: flex;
+        flex-direction: column;
+    }  
+}
+
+.dateSection {
+    grid-column: span 2/span 2;
+    @include phone {
+        display: flex;
+        flex-direction: column;
+    }  
+    
+}
+
+.experienceInfoSection {
+    grid-column: span 6/span 6;
+    @include phone {
+        display: flex;
+        flex-direction: column;
+    }  
+}
