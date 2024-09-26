@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
 import ParticleComponent from "@/components/ParticleComponent";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const shortStory = (
   <>
@@ -106,24 +107,10 @@ export default function Personal() {
             </div>
           </div>
           <IntroSection></IntroSection>
+          <HighlightCards></HighlightCards>
+
           <ExperienceSection />
-          <div className="experienceContainer">
-            <h3 className="dateSection smallHeadingPrimary colorSecondary">
-              2018 — 2019
-            </h3>
-            <div className="experienceInfoSection">
-              <h4>Abservetech Pvt Ltd</h4>
-              <span>Senior Android Developer</span>
-              <div className="spacer"></div>
-              <div className="textAlignJustify">
-                Back in 2012, I decided to try my hand at creating custom Tumblr
-                themes and tumbled head first into the rabbit hole of coding and
-                web development. Fast-forward to today, and I’ve had the
-                privilege of building software for an advertising agency, a
-                start-up, a huge corporation, and a digital product studio.
-              </div>
-            </div>
-          </div>
+          <ExperienceSection />
         </div>
 
         <div className="dark-layer">
@@ -168,6 +155,32 @@ function IntroSection() {
       <p className="subHeadingSecondary colorPrimary textAlignJustify">
         {shortStory}
       </p>
+    </div>
+  );
+}
+
+function HighlightCards() {
+  return (
+    <div className="highlightsContainer superPaddingVertical">
+      <div className="highlightsFirstSection">
+        <div className="firstSubContainer">
+          <div>
+            <img
+              src="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f4360d000e72e932bf/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin"
+              alt="round images"
+              className="locationImage"
+            ></img>
+          </div>
+        </div>
+        <div className="firstSubContainer flex-dir-c flex-ai-c flex-jc-c">
+        <FontAwesomeIcon
+                  className="socialIcon fa-xl"
+                  icon={faDownload}
+                />
+                <h3 className="smallHeadingPrimary colorSecondary">Download Resume</h3>
+        </div>
+      </div>
+      <div className="highlightsSecondSection"></div>
     </div>
   );
 }
