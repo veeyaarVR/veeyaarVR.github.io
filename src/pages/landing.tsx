@@ -57,20 +57,20 @@ export default function Personal() {
       </Head>
 
       <div>
-        <div className="landing">
+        <div className="padding25Horizontal">
           <div className="flex flex-dir-c flex-ai-c flex-jc-c superPaddingVertical">
             <div>
               <img
                 src="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f01e3000339a63e72d/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin"
                 alt="round images"
-                className="round-image"
+                className="round-image easeIn"
               ></img>
             </div>
-            <div className="spacer"></div>
+            <div className="space"></div>
             <h1 className="smallHeadingPrimary colorSecondary">
               👋 Hi, I am Vignesh Marimuthu
             </h1>
-            <div className="spacer"></div>
+            <div className="space"></div>
             <h2 className="alignCenter">
               Building pixel perfect✨ scalable📈 high quality<br></br>mobile
               applications📱in Native Android framework.
@@ -113,7 +113,7 @@ export default function Personal() {
           <ExperienceSection />
         </div>
 
-        <div className="dark-layer">
+        <div className="fixed width100 height100">
           <ParticleComponent />
         </div>
       </div>
@@ -123,14 +123,14 @@ export default function Personal() {
 
 function ExperienceSection() {
   return (
-    <div className="experienceContainer">
-      <h3 className="dateSection smallHeadingPrimary colorSecondary">
+    <div className="grid grid-template-col-8">
+      <h3 className="grid-col-span-2 smallHeadingPrimary colorSecondary">
         2020 — Present
       </h3>
-      <div className="experienceInfoSection">
+      <div className="grid-col-span-6">
         <h4>Cumulations Technologies</h4>
         <span>Senior Android Developer</span>
-        <div className="spacer"></div>
+        <div className="space"></div>
         <div className="textAlignJustify">
           Back in 2012, I decided to try my hand at creating custom Tumblr
           themes and tumbled head first into the rabbit hole of coding and web
@@ -138,7 +138,7 @@ function ExperienceSection() {
           building software for an advertising agency, a start-up, a huge
           corporation, and a digital product studio.
         </div>
-        <div className="likesContainer">
+        <div className="flex flex-wrap relative widthFitContent">
           <div className="learnedSkills skillsText colorSecondary">Kotlin</div>
           <div className="learnedSkills skillsText colorSecondary">Flutter</div>
           <div className="learnedSkills skillsText colorSecondary">RxJava</div>
@@ -161,9 +161,9 @@ function IntroSection() {
 
 function HighlightCards() {
   return (
-    <div className="highlightsContainer superPaddingVertical">
-      <div className="highlightsFirstSection">
-        <div className="firstSubContainer">
+    <div className="grid grid-template-col-3 grid-gap-1 superPaddingVertical">
+      <div className="grid grid-gap-1 grid-col-span-1 grid-template-col-2 height250px">
+        <div className="width100 height100 grid-col-span-1 flex cardHover roundedBorder">
           <div>
             <img
               src="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f4360d000e72e932bf/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin"
@@ -172,7 +172,7 @@ function HighlightCards() {
             ></img>
           </div>
         </div>
-        <div className="firstSubContainer flex-dir-c flex-ai-c flex-jc-c">
+        <div className="width100 height100 grid-col-span-1 flex flex-dir-c flex-ai-c flex-jc-c cardHover roundedBorder ">
         <FontAwesomeIcon
                   className="socialIcon fa-xl"
                   icon={faDownload}
@@ -180,7 +180,7 @@ function HighlightCards() {
                 <h3 className="smallHeadingPrimary colorSecondary">Download Resume</h3>
         </div>
       </div>
-      <div className="highlightsSecondSection"></div>
+      <div className="grid grid-col-span-2 roundedBorder cardHover"></div>
     </div>
   );
 }

@@ -16,7 +16,7 @@ export default function Privacy() {
           content="https://vigneshmarimuthu.com/logo512.png"
         ></meta>
       </Head>
-      <div className="padding25 superPadding">
+      <div className="padding25px superPadding">
         <h1>Privacy Policy</h1>
         <p>
           Vignesh Marimuthu built the History Notes app as a Free app. This

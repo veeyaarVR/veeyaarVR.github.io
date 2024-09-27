@@ -54,7 +54,7 @@ const JournalScreen = () => {
     return <div>fetching entries...</div>;
   } else {
     return (
-      <div className="padding25 superPadding">
+      <div className="padding25px superPadding">
         <div className=" flex flex-jc-sb flex-ai-c">
           <div>
             <div className="superTitlePrimary colorPrimary">Journal</div>
@@ -85,11 +85,11 @@ const JournalScreen = () => {
         </div>
         <div className="superPaddingVertical">
           {!Array.isArray(entries) || !entries.length ? (
-            <div className=" padding25 justify-center flex flex-ai-c">No entries made on that day! </div>
+            <div className=" padding25px justify-center flex flex-ai-c">No entries made on that day! </div>
           ) : (
             entries.map((entry) => (
               <div key={entry.entry} className="journal-entry">
-                <div className="padding25" key={entry.entry}>
+                <div className="padding25px" key={entry.entry}>
                   <p className="colorPrimary subHeadingSecondary ">
                     {entry.entry}
                   </p>

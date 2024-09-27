@@ -1,0 +1,30 @@
+.round-image{
+	border-radius:100%; 
+	height: 125px; 
+	margin: 0 auto;
+	width: 125px; 
+  object-fit: cover;
+  overflow:hidden;
+  @include fadeIn();
+  &:hover {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.socialIcon {
+  color: $colorPrimary;
+  padding: 10px;
+  size: 2x;
+  &:hover {
+    color: $colorSecondary;
+  }
+}
+
+.locationImage {
+  width: 100%;
+  height: 100%;   
+  border-radius: .75rem;
+  display: block;
+  object-fit: cover;
+}
