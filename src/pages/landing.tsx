@@ -14,6 +14,7 @@ import Head from "next/head";
 import Link from "next/link";
 import ParticleComponent from "@/components/ParticleComponent";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/router";
 
 export default function Personal() {
   return (
@@ -57,28 +58,28 @@ export default function Personal() {
             </h2>
 
             <div className="flex flex-ai-c flex-jc-c">
-              <Link href="https://github.com/veeyaarVR">
+              <Link href="https://github.com/veeyaarVR" title="View my projects">
                 <FontAwesomeIcon className="socialIcon fa-xl" icon={faGithub} />
               </Link>
-              <Link href="https://www.youtube.com/@BeingAverageEngineer">
+              <Link href="https://www.youtube.com/@BeingAverageEngineer" title="My YouTube channel">
                 <FontAwesomeIcon
                   className="socialIcon fa-xl"
                   icon={faYoutube}
                 />
               </Link>
-              <Link href="https://blog.vigneshmarimuthu.com">
+              <Link href="https://blog.vigneshmarimuthu.com" title="Read my blog">
                 <FontAwesomeIcon
                   className="socialIcon fa-xl"
                   icon={faHashnode}
                 />
               </Link>
-              <Link href="https://play.google.com/store/apps/developer?id=Vignesh+Marimuthu">
+              <Link href="https://play.google.com/store/apps/developer?id=Vignesh+Marimuthu" title="Try my apps">
                 <FontAwesomeIcon
                   className="socialIcon fa-xl"
                   icon={faGooglePlay}
                 />
               </Link>
-              <Link href="https://www.linkedin.com/in/vignesh-marimuthu-023552184/">
+              <Link href="https://www.linkedin.com/in/vignesh-marimuthu-023552184/" title="Hire me">
                 <FontAwesomeIcon
                   className="socialIcon fa-xl"
                   icon={faLinkedin}
@@ -98,7 +99,7 @@ export default function Personal() {
 
 function ExperienceSection() {
   return (
-    <div className="grid grid-template-col-8">
+    <div className="grid grid-template-col-8 padding25px">
       <h3 className="grid-col-span-2 smallHeadingPrimary colorSecondary">
         2020 — Present
       </h3>
@@ -125,9 +126,15 @@ function ExperienceSection() {
 }
 
 function HighlightCustomCards() {
+  const router = useRouter();
+
   return (
     <div className="grid grid-template-col-7  md-grid-template-col-2 grid-gap-1 superPaddingVertical">
-      <div className="width100 height100 grid-col-span-2 md-grid-col-span-1 flex cardHover roundedBorder-primary">
+      <Link
+        className="width100 height100 grid-col-span-2 md-grid-col-span-1 flex cardHover roundedBorder-primary"
+        href="https://www.google.com/maps/place/Bengaluru,+Karnataka/@12.9542802,77.4661302,11z"
+        target="_blank"
+      >
         <div>
           <img
             src="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f8e3b1000893ac0a3c/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin"
@@ -135,22 +142,27 @@ function HighlightCustomCards() {
             className="locationImage"
           ></img>
         </div>
-      </div>
+      </Link>
 
       <div className="grid grid-gap-1 grid-col-span-5 md-grid-col-span-2 grid-template-row-2">
-        <div className="width100 height100 grid-col-span-1 cardHover bg-container-secondary roundedBorder-primary">
+        <div
+          className="width100 height100 grid-col-span-1 cardHover bg-container-secondary roundedBorder-primary"
+          onClick={() => {
+            router.push("/journal");
+          }}
+        >
           <div className="padding25px">
             <h2 className="flex-ai-c  superTitlePrimary ">Journal Entries</h2>
             <h3 className="colorSecondary">Take a peek into my tech journal</h3>
           </div>
         </div>
         <div className="grid grid-col-span-1  grid-template-col-2 grid-gap-1">
-          <div className="flex flex-dir-c flex-ai-c flex-jc-c  roundedBorder colorTransition cardHover bg-container-primary grid-col-span-1">
+          <Link href="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f8fce600150e8c2826/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin" className="flex flex-dir-c flex-ai-c flex-jc-c  roundedBorder colorTransition cardHover bg-container-primary grid-col-span-1">
             <FontAwesomeIcon className="socialIcon fa-xl" icon={faDownload} />
             <h3 className="smallHeadingPrimary colorSecondary">
               Download Resume
             </h3>
-          </div>
+          </Link>
           <div className="roundedBorder cardHover grid-col-span-1"></div>
         </div>
       </div>
