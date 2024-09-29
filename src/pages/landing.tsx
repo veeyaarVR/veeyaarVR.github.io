@@ -15,30 +15,6 @@ import Link from "next/link";
 import ParticleComponent from "@/components/ParticleComponent";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
-const shortStory = (
-  <>
-    A full-time Android Dev based in India, who also runs a{" "}
-    <Link
-      href="https://www.youtube.com/channel/UCUjFwZ-SEMK5k-i24VzRu0w?sub_confirmation=1"
-      className="buttonText colorSecondary"
-    >
-      YouTube Channel
-    </Link>{" "}
-    and a{" "}
-    <Link
-      href="https://blog.vigneshmarimuthu.com/"
-      className="buttonText colorSecondary"
-    >
-      Blog
-    </Link>
-    , where I post and write tech tutorials. (Yeah! Nerd.)<br></br>
-    <br></br>Selectively social, constant learner, cis-het, creative at night,
-    motivated during shower, occasionally good lookin and a humble human being.
-    Belongs to House Targaryen.<br></br>
-    <br></br>I am that guy, who cuts your call and texts you back,{" "}
-    <i>I&apos;ll call you later</i>, but never does.
-  </>
-);
 export default function Personal() {
   return (
     <main>
@@ -57,7 +33,11 @@ export default function Personal() {
       </Head>
 
       <div>
-        <div className="padding25Horizontal">
+        <div className="absolute fullScreen">
+          <ParticleComponent />
+        </div>
+
+        <div className=" absolute padding25Horizontal">
           <div className="flex flex-dir-c flex-ai-c flex-jc-c superPaddingVertical">
             <div>
               <img
@@ -106,15 +86,10 @@ export default function Personal() {
               </Link>
             </div>
           </div>
-          <IntroSection></IntroSection>
-          <HighlightCards></HighlightCards>
+          <HighlightCustomCards></HighlightCustomCards>
 
           <ExperienceSection />
           <ExperienceSection />
-        </div>
-
-        <div className="fixed width100 height100">
-          <ParticleComponent />
         </div>
       </div>
     </main>
@@ -149,38 +124,36 @@ function ExperienceSection() {
   );
 }
 
-function IntroSection() {
+function HighlightCustomCards() {
   return (
-    <div className="superPaddingVertical flex flex-jc-sa flex-ai-s">
-      <p className="subHeadingSecondary colorPrimary textAlignJustify">
-        {shortStory}
-      </p>
-    </div>
-  );
-}
-
-function HighlightCards() {
-  return (
-    <div className="grid grid-template-col-3 grid-gap-1 superPaddingVertical">
-      <div className="grid grid-gap-1 grid-col-span-1 grid-template-col-2 height250px">
-        <div className="width100 height100 grid-col-span-1 flex cardHover roundedBorder">
-          <div>
-            <img
-              src="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f4360d000e72e932bf/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin"
-              alt="round images"
-              className="locationImage"
-            ></img>
-          </div>
-        </div>
-        <div className="width100 height100 grid-col-span-1 flex flex-dir-c flex-ai-c flex-jc-c cardHover roundedBorder ">
-        <FontAwesomeIcon
-                  className="socialIcon fa-xl"
-                  icon={faDownload}
-                />
-                <h3 className="smallHeadingPrimary colorSecondary">Download Resume</h3>
+    <div className="grid grid-template-col-7  md-grid-template-col-2 grid-gap-1 superPaddingVertical">
+      <div className="width100 height100 grid-col-span-2 md-grid-col-span-1 flex cardHover roundedBorder-primary">
+        <div>
+          <img
+            src="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f8e3b1000893ac0a3c/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin"
+            alt="round images"
+            className="locationImage"
+          ></img>
         </div>
       </div>
-      <div className="grid grid-col-span-2 roundedBorder cardHover"></div>
+
+      <div className="grid grid-gap-1 grid-col-span-5 md-grid-col-span-2 grid-template-row-2">
+        <div className="width100 height100 grid-col-span-1 cardHover bg-container-secondary roundedBorder-primary">
+          <div className="padding25px">
+            <h2 className="flex-ai-c  superTitlePrimary ">Journal Entries</h2>
+            <h3 className="colorSecondary">Take a peek into my tech journal</h3>
+          </div>
+        </div>
+        <div className="grid grid-col-span-1  grid-template-col-2 grid-gap-1">
+          <div className="flex flex-dir-c flex-ai-c flex-jc-c  roundedBorder colorTransition cardHover bg-container-primary grid-col-span-1">
+            <FontAwesomeIcon className="socialIcon fa-xl" icon={faDownload} />
+            <h3 className="smallHeadingPrimary colorSecondary">
+              Download Resume
+            </h3>
+          </div>
+          <div className="roundedBorder cardHover grid-col-span-1"></div>
+        </div>
+      </div>
     </div>
   );
 }

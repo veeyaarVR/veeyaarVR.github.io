@@ -4,3 +4,22 @@
     overflow: hidden;
 }
 
+.roundedBorder-primary {
+    border: 1px solid $greyOutline;
+    border-radius: .75rem;
+    overflow: hidden;
+}
+
+.bg-container-secondary {
+    background-color : rgb(240, 235, 235);
+}
+
+.bg-container-primary {
+    background-color : $highlightColor;
+}
+
+
+.highlightCardSpacing {
+    @extend .grid-template-col-7;
+    @extend .md-grid-template-col-2;
+}
