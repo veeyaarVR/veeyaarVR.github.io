@@ -1,0 +1,135 @@
+.fullScreen {
+    min-height: 100vh;
+}
+
+.centerAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.widthFitContent {
+    width: fit-content;
+}
+
+.grid {
+    display: grid;
+
+    &-template-col-8 {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+
+    &-template-col-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    &-template-col-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &-template-col-7 {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+
+    &-template-row-2 {
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+    }
+
+    &-col-span-2 {
+        grid-column: span 2/span 2;
+    }
+
+    &-col-span-5 {
+        grid-column: span 5/span 5;
+    }
+
+    &-col-span-1 {
+        grid-column: span 1 / span 1;
+    }
+
+    &-col-span-6 {
+        grid-column: span 6/span 6;
+    }   
+
+    &-gap-50 {
+        column-gap: 50;
+    }
+
+    &-gap-1 {
+        gap: 1rem;
+    }
+}
+
+@include phone {
+    .md-grid-template-col-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md-grid-col-span-2 {
+        grid-column: span 2/span 2;
+    }
+    
+}
+
+
+.flex {
+    display: flex;
+
+    @include tablet {
+        flex-wrap: wrap;
+    }
+
+    @include phone {
+        flex-wrap: wrap;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-se {
+        justify-content: space-evenly;
+    }
+
+    &-jc-start {
+        justify-content: flex-start;
+    }
+
+    &-jc-end {
+        justify-content: flex-end;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-jc-sa {
+        justify-content: space-around;
+    }
+
+    &-dir-c {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    &-length-1 {
+        flex: 1 0 auto;
+    }
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+}

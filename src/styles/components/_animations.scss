@@ -1,0 +1,19 @@
+.easeIn {
+    transition: top .2s ease-in-out,width .5s,height .5s;
+}
+
+.cardHover {
+    transition-duration: .3s;
+    transition-property: transform;
+    &:hover {
+        transform: scale(1.05) rotate(1.5deg);
+        cursor: pointer;
+    }
+}
+
+.colorTransition {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    &:hover {
+        background-color: $colorBackground;
+    }
+}

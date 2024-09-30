@@ -21,7 +21,7 @@ export default function Professional() {
           content="https://vigneshmarimuthu.com/logo512.png"
         ></meta>
       </Head>
-      <div className="headerInfo padding25 superPadding">
+      <div className="headerInfo padding25px superPadding">
         <div className="colorPrimary bottomLine homeLink">
           <Link href="/">← VIGNESH MARIMUTHU</Link>
         </div>

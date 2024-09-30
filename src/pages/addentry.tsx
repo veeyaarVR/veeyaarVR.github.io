@@ -54,7 +54,7 @@ const AddEntryScreen = () => {
     return <div>validating...</div>;
   } else {
     return (
-      <div className="articlePadding">
+      <div className="padding25Horizontal padding10Vertical width100 height100">
         <div className="flex flex-dir-c">
           <div >
             <div className="superTitlePrimary colorPrimary">Journal Entry</div>
@@ -62,7 +62,7 @@ const AddEntryScreen = () => {
               {`write away... don't think twice!`}
             </div>
           </div>
-          <textarea value={entry} id="fname" name="journal-entry" placeholder="what's up...?" onChange={handleChange} className="textFieldJournal"></textarea>
+          <textarea value={entry} id="fname" name="journal-entry" placeholder="what's up...?" onChange={handleChange} className="margin10Vertical flex-length-1"></textarea>
           <div>
             <button className="personal-link flex-ai-end" onClick={handleSubmit}> Submit</button>
           </div>

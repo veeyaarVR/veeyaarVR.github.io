@@ -16,7 +16,7 @@ export default function TermsAndCondition() {
           content="https://vigneshmarimuthu.com/logo512.png"
         ></meta>
       </Head>
-      <div className="padding25 superPadding">
+      <div className="padding25px superPadding">
         <h1>Terms &amp; Conditions</h1>
         <p>
           By downloading or using the app, these terms will automatically apply

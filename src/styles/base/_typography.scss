@@ -154,6 +154,21 @@
 }
 
 
+.textAlignCenter {
+  text-align: start;
+
+  @include phone {
+    text-align: center;
+  }
+}
+
+.textAlignJustify {
+  text-align: justify;
+
+  @include phone {
+    text-align: justify;
+  }
+}
 
 .colorPrimary {
   color: $colorPrimary;

@@ -78,7 +78,7 @@ export default function Personal() {
 
       </Head>
       <div className="personal">
-        <div className="colorPrimary padding25  homeLink centerHorizontal">
+        <div className="colorPrimary padding25px  homeLink centerHorizontal">
           <Link href="/">⌂ VIGNESH MARIMUTHU</Link>
           <div className="bottomLine"> </div>
         </div>
@@ -129,12 +129,12 @@ function ShortStorySection() {
     <div className="">
       <div className="superPaddingVertical flex flex-jc-sa flex-ai-c superPadding">
         <h1
-          className="superTitlePrimary  padding25 colorSecondary"
+          className="superTitlePrimary  padding25px colorSecondary"
           data-text="Vignesh Marimuthu"
         >
           ShortStory
         </h1>
-        <p className="subHeadingSecondary padding25 colorPrimary textAlignCenter">
+        <p className="subHeadingSecondary padding25px colorPrimary textAlignCenter">
           {shortStory}
         </p>
       </div>
@@ -146,7 +146,7 @@ function LikesSection() {
   return (
     <div className="fullScreen superPaddingVertical flex flex-ai-c flex-jc-c superPadding">
       <div>
-        <div className="subHeadingPrimary subHeadingSecondary-align-center padding25 colorPrimary">
+        <div className="subHeadingPrimary subHeadingSecondary-align-center padding25px colorPrimary">
           If you could vibe to a lot of the below, we can be great friends ✌️
         </div>
         <div className="likesContainer">
@@ -172,7 +172,7 @@ function SocialLinks() {
   return (
     <div className="flex flex-ai-c flex-jc-c superPadding">
       <div>
-        <div className="subHeadingSecondary colorSecondary subHeadingSecondary-align-center padding25">
+        <div className="subHeadingSecondary colorSecondary subHeadingSecondary-align-center padding25px">
           Connect with me even if you don&apos;t vibe with any of the above 🙌
           <br></br> I desperately need some friends.
         </div>
@@ -200,7 +200,7 @@ function WishListInfo() {
   return (
     <div className="flex flex-ai-c flex-jc-c ">
       <div>
-        <div className=" subHeadingSecondary colorPrimary subHeadingSecondary-align-center padding25">
+        <div className=" subHeadingSecondary colorPrimary subHeadingSecondary-align-center padding25px">
           Incase and unfortunately, if you are already my friend 😅
           <br></br> I have shamelessly made a wishlist of things, that you can
           gift me 🥳
