@@ -15,6 +15,8 @@ import Link from "next/link";
 import ParticleComponent from "@/components/ParticleComponent";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { databases } from "@/api/appwrite";
 
 export default function Personal() {
   return (
@@ -58,28 +60,43 @@ export default function Personal() {
             </h2>
 
             <div className="flex flex-ai-c flex-jc-c">
-              <Link href="https://github.com/veeyaarVR" title="View my projects">
+              <Link
+                href="https://github.com/veeyaarVR"
+                title="View my projects"
+              >
                 <FontAwesomeIcon className="socialIcon fa-xl" icon={faGithub} />
               </Link>
-              <Link href="https://www.youtube.com/@BeingAverageEngineer" title="My YouTube channel">
+              <Link
+                href="https://www.youtube.com/@BeingAverageEngineer"
+                title="My YouTube channel"
+              >
                 <FontAwesomeIcon
                   className="socialIcon fa-xl"
                   icon={faYoutube}
                 />
               </Link>
-              <Link href="https://blog.vigneshmarimuthu.com" title="Read my blog">
+              <Link
+                href="https://blog.vigneshmarimuthu.com"
+                title="Read my blog"
+              >
                 <FontAwesomeIcon
                   className="socialIcon fa-xl"
                   icon={faHashnode}
                 />
               </Link>
-              <Link href="https://play.google.com/store/apps/developer?id=Vignesh+Marimuthu" title="Try my apps">
+              <Link
+                href="https://play.google.com/store/apps/developer?id=Vignesh+Marimuthu"
+                title="Try my apps"
+              >
                 <FontAwesomeIcon
                   className="socialIcon fa-xl"
                   icon={faGooglePlay}
                 />
               </Link>
-              <Link href="https://www.linkedin.com/in/vignesh-marimuthu-023552184/" title="Hire me">
+              <Link
+                href="https://www.linkedin.com/in/vignesh-marimuthu-023552184/"
+                title="Hire me"
+              >
                 <FontAwesomeIcon
                   className="socialIcon fa-xl"
                   icon={faLinkedin}
@@ -98,6 +115,40 @@ export default function Personal() {
 }
 
 function ExperienceSection() {
+  // const [experiences, setExperiences] = useState([]);
+
+  // async function fetchExperiences() {
+  //   try {
+  //     const posts = await databases.listDocuments(
+  //       "667bda7d00130e6f9c7e",
+  //       "66c617f700092b1d86bc"
+  //     );
+
+  //     var experiences = [];
+  //     posts.documents.forEach((doc) => {
+  //       const techStacks = doc.techStack.toString();
+  //       console.log(techStacks);
+  //       experiences.push({
+  //         name: doc.name,
+  //         role: doc.role,
+  //         techStack: techStacks,
+  //         website: doc.website,
+  //         daterange: doc.daterange,
+  //         summary: doc.summary,
+  //       });
+  //     });
+
+  //     setExperiences(experiences);
+  //   } catch (err) {
+  //     console.error(err);
+  //     alert("Error fetching posts");
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   fetchExperiences();
+  // }, []);
+
   return (
     <div className="grid grid-template-col-8 padding25px">
       <h3 className="grid-col-span-2 smallHeadingPrimary colorSecondary">
@@ -157,7 +208,10 @@ function HighlightCustomCards() {
           </div>
         </div>
         <div className="grid grid-col-span-1  grid-template-col-2 grid-gap-1">
-          <Link href="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f8fce600150e8c2826/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin" className="flex flex-dir-c flex-ai-c flex-jc-c  roundedBorder colorTransition cardHover bg-container-primary grid-col-span-1">
+          <Link
+            href="https://cloud.appwrite.io/v1/storage/buckets/66f01cea000b336dfed6/files/66f8fce600150e8c2826/view?project=667bc0b800308c325c54&project=667bc0b800308c325c54&mode=admin"
+            className="flex flex-dir-c flex-ai-c flex-jc-c  roundedBorder colorTransition cardHover bg-container-primary grid-col-span-1"
+          >
             <FontAwesomeIcon className="socialIcon fa-xl" icon={faDownload} />
             <h3 className="smallHeadingPrimary colorSecondary">
               Download Resume
@@ -169,3 +223,4 @@ function HighlightCustomCards() {
     </div>
   );
 }
+
